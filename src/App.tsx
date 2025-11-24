@@ -494,7 +494,7 @@ function TwitchIcon() {
   );
 }
 
-export default function Home() {
+export default function App() {
   return (
     <div className="bg-white min-h-screen w-full flex justify-center overflow-x-hidden" data-name="Home">
       <div className="bg-white relative w-full max-w-[1440px] h-[5341px]">
