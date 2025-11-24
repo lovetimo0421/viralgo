@@ -19,12 +19,12 @@ Vite expects Node.js 20.19+ (or current LTS). Install Node globally so you no lo
 ## Folder Structure
 ```
 .
-©À©¤©¤ index.html          # Vite entry template
-©À©¤©¤ package.json        # npm scripts and deps
-©À©¤©¤ src/                # drop the React/Vite layout you exported earlier
-©¦   ©À©¤©¤ assets/         # optional local images/fonts
-©¦   ©¸©¤©¤ main.tsx        # Vite entry point (currently boilerplate)
-©¸©¤©¤ public/             # static assets served as-is (favicons, etc.)
+index.html          # Vite entry template
+package.json        # npm scripts and deps
+src/                # drop the React/Vite layout you exported earlier
+assets/         # optional local images/fonts
+main.tsx        # Vite entry point (currently boilerplate)
+public/             # static assets served as-is (favicons, etc.)
 ```
 
 Feel free to overwrite the `src` directory with your existing Viralgo UI once you're ready.
