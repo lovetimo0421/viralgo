@@ -55,7 +55,7 @@ function LearnMoreButton() {
         }}
         transition={{ duration: 0.3 }}
       />
-      <p className="absolute font-['Days_One:Regular',sans-serif] h-[32px] leading-[normal] left-[760px] not-italic text-[25px] text-white top-[675px] w-[115px] pointer-events-none">Try It!</p>
+      <p className="absolute h-[32px] leading-[normal] left-[760px] not-italic text-[25px] text-white top-[675px] w-[115px] pointer-events-none" style={{ fontFamily: 'Days One' }}>Try It!</p>
     </motion.div>
   );
 }
@@ -63,7 +63,7 @@ function LearnMoreButton() {
 function Title() {
   return (
     <div className="absolute contents left-[720px] top-[210px]" data-name="Title">
-      <p className="absolute font-['Days_One:Regular',sans-serif] h-[159px] leading-[normal] left-[831px] not-italic text-[#101545] text-[0px] text-[130px] top-[210px] w-[757px]">
+      <p className="absolute h-[159px] leading-[normal] left-[831px] not-italic text-[#101545] text-[0px] text-[130px] top-[210px] w-[757px]" style={{ fontFamily: 'Days One' }}>
         <span className="text-[#ff5416]">Vir</span>
         <span className="text-white">algo</span>
       </p>
@@ -111,7 +111,7 @@ function Group() {
         whileHover={{ boxShadow: "0 0 20px rgba(16, 21, 69, 0.5)", backgroundColor: "#101545" }}
         transition={{ duration: 0.3 }}
       />
-      <p className="absolute font-['Days_One:Regular',sans-serif] h-[21.596px] leading-[normal] left-[1308px] not-italic text-[16px] text-white top-[18px] w-[85.22px] pointer-events-none">Try It!</p>
+      <p className="absolute h-[21.596px] leading-[normal] left-[1308px] not-italic text-[16px] text-white top-[18px] w-[85.22px] pointer-events-none" style={{ fontFamily: 'Days One' }}>Try It!</p>
     </motion.div>
   );
 }
@@ -122,8 +122,8 @@ function NavBar() {
       <div className="absolute bg-white h-[60px] left-0 top-0 w-[1440px]" />
       <Group />
       <motion.p
-        className="[text-underline-position:from-font] absolute decoration-solid font-['Pathway_Extreme:Regular',sans-serif] font-normal h-[40px] leading-[normal] left-[1152px] text-[#101545] text-[14px] top-[22px] underline w-[105px] cursor-pointer"
-        style={{ fontVariationSettings: "'wdth' 100" }}
+        className="[text-underline-position:from-font] absolute decoration-solid font-normal h-[40px] leading-[normal] left-[1152px] text-[#101545] text-[14px] top-[22px] underline w-[105px] cursor-pointer"
+        style={{ fontVariationSettings: "'wdth' 100", fontFamily: 'Pathway Extreme' }}
         whileHover={{ scale: 1.05, color: "#ff5416" }}
         whileTap={{ scale: 0.95 }}
         transition={{ duration: 0.2 }}
@@ -131,8 +131,8 @@ function NavBar() {
         Insights
       </motion.p>
       <motion.p
-        className="[text-underline-position:from-font] absolute decoration-solid font-['Pathway_Extreme:Regular',sans-serif] font-normal h-[40px] leading-[normal] left-[1047px] text-[#101545] text-[14px] top-[22px] underline w-[67px] cursor-pointer"
-        style={{ fontVariationSettings: "'wdth' 100" }}
+        className="[text-underline-position:from-font] absolute decoration-solid font-normal h-[40px] leading-[normal] left-[1047px] text-[#101545] text-[14px] top-[22px] underline w-[67px] cursor-pointer"
+        style={{ fontVariationSettings: "'wdth' 100", fontFamily: 'Pathway Extreme' }}
         whileHover={{ scale: 1.05, color: "#ff5416" }}
         whileTap={{ scale: 0.95 }}
         transition={{ duration: 0.2 }}
@@ -140,8 +140,8 @@ function NavBar() {
         Sources
       </motion.p>
       <motion.p
-        className="[text-underline-position:from-font] absolute decoration-solid font-['Pathway_Extreme:Regular',sans-serif] font-normal h-[40px] leading-[normal] left-[931px] text-[#101545] text-[14px] top-[22px] underline w-[90px] cursor-pointer"
-        style={{ fontVariationSettings: "'wdth' 100" }}
+        className="[text-underline-position:from-font] absolute decoration-solid font-normal h-[40px] leading-[normal] left-[931px] text-[#101545] text-[14px] top-[22px] underline w-[90px] cursor-pointer"
+        style={{ fontVariationSettings: "'wdth' 100", fontFamily: 'Pathway Extreme' }}
         whileHover={{ scale: 1.05, color: "#ff5416" }}
         whileTap={{ scale: 0.95 }}
         transition={{ duration: 0.2 }}
@@ -186,8 +186,8 @@ function OurPurpose() {
       <div className="absolute h-[612px] left-[107px] rounded-[20px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] top-[1386px] w-[1226px]">
         <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[20px] size-full" src={imgRectangle73} />
       </div>
-      <p className="absolute font-['Days_One:Regular',sans-serif] h-[102.989px] leading-[normal] left-[719.99px] not-italic text-[80px] text-center text-white top-[1475px] translate-x-[-50%] w-[1057.99px]">Our Purpose</p>
-      <p className="absolute font-['Fira_Code:Regular',sans-serif] font-normal h-[458px] leading-[normal] left-[208px] text-[18px] text-white top-[1652px] w-[1058px] whitespace-pre-wrap font-[Fira_Code]">{`This project builds an interactive dashboard that tracks how video game popularity has evolved from 1980 to today and how that popularity connects to social media hype. By combining Steam peak loads, long-term play data, release volume, genre revenue/units, and recent metrics like DAU, in-game purchases, mentions, and stream viewership, it lets you see both the "hit history" and the real-time attention economy in one place. The uniqueness comes from linking game performance, genre economics, and social buzz across decades, with controls that let users actively toggle time ranges, platforms, and genres to explore questions like "Which genres turn hype into money?" or "Are there quiet giants with huge players but low social noise?"`}</p>
+      <p className="absolute h-[102.989px] leading-[normal] left-[719.99px] not-italic text-[80px] text-center text-white top-[1475px] translate-x-[-50%] w-[1057.99px]" style={{ fontFamily: 'Days One' }}>Our Purpose</p>
+      <p className="absolute font-normal h-[458px] leading-[normal] left-[208px] text-[18px] text-white top-[1652px] w-[1058px] whitespace-pre-wrap" style={{ fontFamily: 'Fira Code' }}>{`This project builds an interactive dashboard that tracks how video game popularity has evolved from 1980 to today and how that popularity connects to social media hype. By combining Steam peak loads, long-term play data, release volume, genre revenue/units, and recent metrics like DAU, in-game purchases, mentions, and stream viewership, it lets you see both the "hit history" and the real-time attention economy in one place. The uniqueness comes from linking game performance, genre economics, and social buzz across decades, with controls that let users actively toggle time ranges, platforms, and genres to explore questions like "Which genres turn hype into money?" or "Are there quiet giants with huge players but low social noise?"`}</p>
       <div className="absolute h-0 left-[534px] top-[1596px] w-[372.624px]">
         <div className="absolute bottom-0 left-0 right-0 top-[-2px]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 373 2">
@@ -296,8 +296,8 @@ function BottomBg() {
 function Group4() {
   return (
     <div className="absolute contents leading-[normal] left-[839px] text-[#ff5416] text-nowrap top-[4929px] whitespace-pre">
-      <p className="absolute font-['Fira_Code:Bold',sans-serif] font-bold left-[1126px] text-[20px] top-[4929px]">Sources</p>
-      <div className="absolute font-['Fira_Code:Regular',sans-serif] font-normal left-[1126px] text-[18px] top-[4990px]">
+      <p className="absolute font-bold left-[1126px] text-[20px] top-[4929px]" style={{ fontFamily: 'Fira Code' }}>Sources</p>
+      <div className="absolute font-normal left-[1126px] text-[18px] top-[4990px]" style={{ fontFamily: 'Fira Code' }}>
         <motion.p
           className="mb-0 cursor-pointer"
           whileHover={{ scale: 1.05, color: "#ff8b16" }}
@@ -364,7 +364,7 @@ function Group4() {
           </a>
         </motion.p>
       </div>
-      <div className="absolute font-['Fira_Code:Regular',sans-serif] font-normal left-[839px] text-[18px] top-[4990px]">
+      <div className="absolute font-normal left-[839px] text-[18px] top-[4990px]" style={{ fontFamily: 'Fira Code' }}>
         <motion.p
           className="mb-0 cursor-pointer"
           whileHover={{ scale: 1.05, color: "#ff8b16" }}
@@ -398,7 +398,7 @@ function Group4() {
           </a>
         </motion.p>
       </div>
-      <p className="absolute font-['Fira_Code:Bold',sans-serif] font-bold left-[839px] text-[20px] top-[4929px]">Data</p>
+      <p className="absolute font-bold left-[839px] text-[20px] top-[4929px]" style={{ fontFamily: 'Fira Code' }}>Data</p>
     </div>
   );
 }
@@ -499,10 +499,10 @@ export default function App() {
     <div className="bg-white min-h-screen w-full flex justify-center overflow-x-hidden" data-name="Home">
       <div className="bg-white relative w-full max-w-[1440px] h-[5341px]">
         <TopBg />
-        <p className="absolute font-['Days_One:Regular',sans-serif] h-[120px] leading-[normal] left-[701px] not-italic text-[#101545] text-[80px] text-right top-[2186px] translate-x-[-100%] w-[734px]">Assumptions</p>
-        <p className="absolute font-['Fira_Code:Regular',sans-serif] font-normal h-[167px] leading-[normal] left-[720px] text-[20px] text-white top-[431px] w-[616px] font-[Fira_Code]">{`This project quantifies how social-media attention tracks and predicts video-game popularity. We combine YouTube/Twitch/Reddit viewing signals (hours watched, average concurrent viewers) with Steam engagement signals (concurrent players, review velocity) to build a cross-platform, time-aligned panel. `}</p>
+        <p className="absolute h-[120px] leading-[normal] left-[701px] not-italic text-[#101545] text-[80px] text-right top-[2186px] translate-x-[-100%] w-[734px]" style={{ fontFamily: 'Days One' }}>Assumptions</p>
+        <p className="absolute font-normal h-[167px] leading-[normal] left-[720px] text-[20px] text-white top-[431px] w-[616px]" style={{ fontFamily: 'Fira Code' }}>{`This project quantifies how social-media attention tracks and predicts video-game popularity. We combine YouTube/Twitch/Reddit viewing signals (hours watched, average concurrent viewers) with Steam engagement signals (concurrent players, review velocity) to build a cross-platform, time-aligned panel. `}</p>
         <LearnMoreButton />
-        <p className="absolute font-['Fira_Code:Bold',sans-serif] font-bold leading-[normal] left-[850px] text-[25px] text-black text-nowrap top-[3904px] whitespace-pre">Twitch Game Trends</p>
+        <p className="absolute font-bold leading-[normal] left-[850px] text-[25px] text-black text-nowrap top-[3904px] whitespace-pre" style={{ fontFamily: 'Fira Code' }}>Twitch Game Trends</p>
         <Title />
         <NavBar />
         <div className="absolute h-0 left-[720px] top-[378px] w-[224px]">
@@ -527,14 +527,14 @@ export default function App() {
         <div className="absolute left-[131px] size-[530px] top-[2571px]" data-name="Untitled_Artwork 140 1">
           <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgUntitledArtwork1401} />
         </div>
-        <p className="absolute font-['Fira_Code:Bold',sans-serif] font-bold leading-[normal] left-[850px] text-[#101545] text-[25px] text-nowrap top-[2642px] whitespace-pre">Steam Game Genres Data</p>
+        <p className="absolute font-bold leading-[normal] left-[850px] text-[#101545] text-[25px] text-nowrap top-[2642px] whitespace-pre" style={{ fontFamily: 'Fira Code' }}>Steam Game Genres Data</p>
         <YouTubeIcon />
         <Frame />
         <TwitchIcon />
-        <p className="absolute font-['Fira_Code:Regular',sans-serif] font-normal h-[167px] leading-[normal] left-[850px] text-[#101545] text-[18px] top-[2709px] w-[442px] font-[Fira_Code]">We collect Steam data from the Steam Open API, SteamDB, and VGI to build a detailed picture of how each game performs on PC. For every title, we track monthly peak concurrent users, daily active users, new registrations, average session duration, in-game purchase volume, genre tags, and estimated revenue. Together, these metrics let us analyze not just how many people play a game, but how often they come back, how long they stay, how much they spend, and how that differs across genres and over time.</p>
-        <p className="absolute font-['Fira_Code:Bold',sans-serif] font-bold leading-[normal] left-[140px] text-[#101545] text-[25px] text-nowrap top-[3277px] whitespace-pre">YouTube Game Trends</p>
-        <p className="absolute font-['Fira_Code:Regular',sans-serif] font-normal h-[167px] leading-[normal] left-[131px] text-[#101545] text-[18px] top-[3340px] w-[442px] font-[Fira_Code]">From YouTube, we collect hours watched, peak viewers, average viewers, and airtime hours for individual games, and use these metrics to compare YouTube viewing trends with how the same games perform on Steam.</p>
-        <p className="absolute font-['Fira_Code:Regular',sans-serif] font-normal h-[167px] leading-[normal] left-[848px] text-[#101545] text-[18px] top-[3967px] w-[442px] font-[Fira_Code]">Using Twitch Tracker and VGI we collect the social media mentions, stream viewership, current viewers for each game, and influencer endorsements.</p>
+        <p className="absolute font-normal h-[167px] leading-[normal] left-[850px] text-[#101545] text-[18px] top-[2709px] w-[442px]" style={{ fontFamily: 'Fira Code' }}>We collect Steam data from the Steam Open API, SteamDB, and VGI to build a detailed picture of how each game performs on PC. For every title, we track monthly peak concurrent users, daily active users, new registrations, average session duration, in-game purchase volume, genre tags, and estimated revenue. Together, these metrics let us analyze not just how many people play a game, but how often they come back, how long they stay, how much they spend, and how that differs across genres and over time.</p>
+        <p className="absolute font-bold leading-[normal] left-[140px] text-[#101545] text-[25px] text-nowrap top-[3277px] whitespace-pre" style={{ fontFamily: 'Fira Code' }}>YouTube Game Trends</p>
+        <p className="absolute font-normal h-[167px] leading-[normal] left-[131px] text-[#101545] text-[18px] top-[3340px] w-[442px]" style={{ fontFamily: 'Fira Code' }}>From YouTube, we collect hours watched, peak viewers, average viewers, and airtime hours for individual games, and use these metrics to compare YouTube viewing trends with how the same games perform on Steam.</p>
+        <p className="absolute font-normal h-[167px] leading-[normal] left-[848px] text-[#101545] text-[18px] top-[3967px] w-[442px]" style={{ fontFamily: 'Fira Code' }}>Using Twitch Tracker and VGI we collect the social media mentions, stream viewership, current viewers for each game, and influencer endorsements.</p>
       </div>
     </div>
   );
