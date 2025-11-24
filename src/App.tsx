@@ -497,7 +497,7 @@ function TwitchIcon() {
 export default function App() {
   return (
     <div className="bg-white min-h-screen w-full flex justify-center overflow-x-hidden" data-name="Home">
-      <div className="bg-white relative w-full max-w-[1440px] h-[5341px]">
+      <div className="bg-white relative w-full max-w-[1440px] h-[5341px] overflow-hidden border border-gray-300">
         <TopBg />
         <p className="absolute h-[120px] leading-[normal] left-[701px] not-italic text-[#101545] text-[80px] text-right top-[2186px] translate-x-[-100%] w-[734px]" style={{ fontFamily: 'Days One' }}>Assumptions</p>
         <p className="absolute font-normal h-[167px] leading-[normal] left-[720px] text-[20px] text-white top-[431px] w-[616px]" style={{ fontFamily: 'Fira Code' }}>{`This project quantifies how social-media attention tracks and predicts video-game popularity. We combine YouTube/Twitch/Reddit viewing signals (hours watched, average concurrent viewers) with Steam engagement signals (concurrent players, review velocity) to build a cross-platform, time-aligned panel. `}</p>
