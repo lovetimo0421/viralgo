@@ -1,16 +1,20 @@
+"use client";
+/* eslint-disable @next/next/no-img-element */
+
 import { motion } from "motion/react";
-import svgPaths from "./imports/svg-vzckpg3m0b";
-import imgUntitledArtwork1381 from "figma:asset/bbcfda5eed562e08ef4b4fba39e78c9a802e16d5.png";
-import imgUntitledArtwork1361 from "figma:asset/b7a01e0c0ae05cd86b8f9f2231c90fcb2980a569.png";
-import imgRectangle73 from "figma:asset/974f295ffd8a16c3d124959eceaa2f6ec70a7250.png";
-import imgUntitledArtwork1371 from "figma:asset/1c8ffdc7a07a1954eb76224fc2092d70f2be14c5.png";
-import imgUntitledArtwork1421 from "figma:asset/b4b23d2761c68ff17d25c6bc50217bbe3a8b4047.png";
-import imgUntitledArtwork1431 from "figma:asset/82d2ab40a607c2c02f5fa730a6ff61c9ea91c647.png";
-import imgUntitledArtwork1441 from "figma:asset/6778a2caf9b90db6106285cf1b16b1e46ea6d133.png";
-import imgUntitledArtwork1471 from "figma:asset/b54bfa24a39aaf2e379aa5159e61d6292bcb7a16.png";
-import imgUntitledArtwork1481 from "figma:asset/69cade9dd2386582c8defc686ecba3c332224f89.png";
-import imgUntitledArtwork1491 from "figma:asset/e17c5441e9092fccef55ff3a5ff298311912f666.png";
-import imgUntitledArtwork1401 from "figma:asset/1c9d0cfc21a9857de2a906a5385c7ac4bb59d297.png";
+import svgPaths from "@/imports/svg-vzckpg3m0b";
+
+const imgUntitledArtwork1381="/assets/bbcfda5eed562e08ef4b4fba39e78c9a802e16d5.png";
+const imgUntitledArtwork1361="/assets/b7a01e0c0ae05cd86b8f9f2231c90fcb2980a569.png";
+const imgRectangle73="/assets/974f295ffd8a16c3d124959eceaa2f6ec70a7250.png";
+const imgUntitledArtwork1371="/assets/1c8ffdc7a07a1954eb76224fc2092d70f2be14c5.png";
+const imgUntitledArtwork1421="/assets/b4b23d2761c68ff17d25c6bc50217bbe3a8b4047.png";
+const imgUntitledArtwork1431="/assets/82d2ab40a607c2c02f5fa730a6ff61c9ea91c647.png";
+const imgUntitledArtwork1441="/assets/6778a2caf9b90db6106285cf1b16b1e46ea6d133.png";
+const imgUntitledArtwork1471="/assets/b54bfa24a39aaf2e379aa5159e61d6292bcb7a16.png";
+const imgUntitledArtwork1481="/assets/69cade9dd2386582c8defc686ecba3c332224f89.png";
+const imgUntitledArtwork1491="/assets/e17c5441e9092fccef55ff3a5ff298311912f666.png";
+const imgUntitledArtwork1401="/assets/1c9d0cfc21a9857de2a906a5385c7ac4bb59d297.png";
 
 function Group1({ className }: { className?: string }) {
   return (
