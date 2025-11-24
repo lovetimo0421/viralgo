@@ -1,41 +1,40 @@
-# Game Popularity Data Hub (Next.js)
+# Viralgo Frontend (React + Vite)
 
-Full-stack dashboards now live in a single Next.js 15 app router project so both UI and API routes share one codebase.
+This repo now hosts only the client interface for the Viralgo dashboards. The PHP API layer lives on a separate server, so this project focuses on rendering CSV-driven insights and calling those PHP endpoints when needed.
 
-## Requirements
-- Node.js 20+ with npm (install from [nodejs.org](https://nodejs.org/en/download)).
-- VS Code with the official ESLint and Tailwind CSS extensions for inline linting.
+## Stack Overview
+- [Vite](https://vitejs.dev/) + React 19 + TypeScript.
+- Tailwind or other styling libs can be layered on top of `src` as you bring back the design assets.
+- External PHP backend handles data ingestion, CSV parsing, and Twitch/Steam API mirroring.
 
-## Setup & Scripts
+## Getting Started
 ```bash
-npm install              # install workspace deps
-npm run dev              # start local dev server on http://localhost:3000
-npm run lint             # lint using the shared ESLint config
-npm run build && npm start  # production build + preview (optional)
+npm install        # already run once, repeat after pulling updates
+npm run dev        # start Vite dev server on http://localhost:5173
+npm run build      # optional production build output into dist/
 ```
 
-## Data Workflow
-- Keep offline CSV sources inside `data/private/`. Real CSV/TSV files are ignored by git; the folder ships with a `.gitkeep` placeholder so the structure is always present.
-- Use the utility in `src/lib/csv.ts` to read a file server-side:
-  ```ts
-  import {readCsv} from "@/lib/csv";
+Vite expects Node.js 20.19+ (or current LTS). Install Node globally so you no longer need the portable runtime that was used during setup.
 
-  export const getTopGames=async ()=>{
-    const rows=await readCsv("top_games.csv");
-    return rows;
-  };
-  ```
-- Because this runs in the Next.js server context, you can call `readCsv` from Server Components, Server Actions, or API route handlers without exposing file paths to the browser.
+## Folder Structure
+```
+.
+©À©¤©¤ index.html          # Vite entry template
+©À©¤©¤ package.json        # npm scripts and deps
+©À©¤©¤ src/                # drop the React/Vite layout you exported earlier
+©¦   ©À©¤©¤ assets/         # optional local images/fonts
+©¦   ©¸©¤©¤ main.tsx        # Vite entry point (currently boilerplate)
+©¸©¤©¤ public/             # static assets served as-is (favicons, etc.)
+```
 
-## API Surface
-- `src/app/api/health/route.ts` responds with `{status:"ok"}` so you can sanity-check deployments or uptime monitors.
-- Add additional files under `src/app/api/*` to proxy Twitch, Steam, or social APIs for live metrics. Those routes live alongside the UI so they share the same environment variables.
+Feel free to overwrite the `src` directory with your existing Viralgo UI once you're ready.
 
-## UI Entry
-- `src/app/page.tsx` contains a Jarvis-styled mission brief describing the CSV + API layers you will build next.
-- Tailwind CSS (configured via `postcss.config.mjs` and `tailwind.config.ts`) powers layouts and theming for upcoming charts.
+## Connecting To PHP Backend
+- Configure environment variables (e.g., `VITE_API_BASE_URL`) using a `.env` file for dev endpoints.
+- Call PHP routes via `fetch`/`axios` from React components; the PHP server can serve CSV-derived JSON or proxy live Twitch/Steam metrics.
+- Because the backend sits elsewhere, deploy this Vite bundle as static files (Netlify, Vercel, S3, etc.) and point it at the PHP domain.
 
 ## Next Steps
-1. Drop example CSVs (e.g., Twitch viewership snapshots) into `data/private/` and build a route that reads them with `readCsv`.
-2. Scaffold chart components inside `src/app/(routes)` using your preferred visualization library.
-3. Introduce API fetchers for Twitch/Steam so real-time pulses sit next to the offline aggregates.
+1. Copy your previous `src` bundle into this repo to restore the UI.
+2. Define `.env.development` / `.env.production` variables for the PHP API base URL.
+3. Hook up CSV charts and API calls to the PHP services.
