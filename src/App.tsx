@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import svgPaths from "./imports/svg-vzckpg3m0b";
 import imgUntitledArtwork1381 from "figma:asset/bbcfda5eed562e08ef4b4fba39e78c9a802e16d5.png";
 import imgUntitledArtwork1361 from "figma:asset/b7a01e0c0ae05cd86b8f9f2231c90fcb2980a569.png";
@@ -11,6 +12,7 @@ import imgUntitledArtwork1471 from "figma:asset/b54bfa24a39aaf2e379aa5159e61d629
 import imgUntitledArtwork1481 from "figma:asset/69cade9dd2386582c8defc686ecba3c332224f89.png";
 import imgUntitledArtwork1491 from "figma:asset/e17c5441e9092fccef55ff3a5ff298311912f666.png";
 import imgUntitledArtwork1401 from "figma:asset/1c9d0cfc21a9857de2a906a5385c7ac4bb59d297.png";
+import GamesDashboard from './components/games/GamesDashboard';
 
 function Group1({ className }: { className?: string }) {
   return (
@@ -41,22 +43,24 @@ function TopBg() {
 
 function LearnMoreButton() {
   return (
-    <motion.div
-      className="absolute contents left-[716px] top-[660px]"
-      data-name="Learn More Button"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.98 }}
-    >
+    <Link to="/games">
       <motion.div
-        className="absolute bg-gradient-to-l from-[#ff5416] from-[50.481%] h-[62px] left-[716px] rounded-[20px] to-[#ff1b00] top-[660px] w-[180px] cursor-pointer"
-        whileHover={{ 
-          boxShadow: "0 0 25px rgba(255, 84, 22, 0.6)", 
-          backgroundImage: "linear-gradient(to left, #ffffff, #ffffff)" 
-        }}
-        transition={{ duration: 0.3 }}
-      />
-      <p className="absolute h-[32px] leading-[normal] left-[760px] not-italic text-[25px] text-white top-[675px] w-[115px] pointer-events-none" style={{ fontFamily: 'Days One' }}>Try It!</p>
-    </motion.div>
+        className="absolute contents left-[716px] top-[660px]"
+        data-name="Learn More Button"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.98 }}
+      >
+        <motion.div
+          className="absolute bg-gradient-to-l from-[#ff5416] from-[50.481%] h-[62px] left-[716px] rounded-[20px] to-[#ff1b00] top-[660px] w-[180px] cursor-pointer"
+          whileHover={{ 
+            boxShadow: "0 0 25px rgba(255, 84, 22, 0.6)", 
+            backgroundImage: "linear-gradient(to left, #ffffff, #ffffff)" 
+          }}
+          transition={{ duration: 0.3 }}
+        />
+        <p className="absolute h-[32px] leading-[normal] left-[760px] not-italic text-[25px] text-white top-[675px] w-[115px] pointer-events-none" style={{ fontFamily: 'Days One' }}>Try It!</p>
+      </motion.div>
+    </Link>
   );
 }
 
@@ -101,18 +105,20 @@ function Title() {
 
 function Group() {
   return (
-    <motion.div
-      className="absolute contents left-[1283px] top-[12px]"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.98 }}
-    >
+    <Link to="/games">
       <motion.div
-        className="absolute bg-[#008cff] h-[35px] left-[1283px] rounded-[10px] top-[12px] w-[103px] cursor-pointer"
-        whileHover={{ boxShadow: "0 0 20px rgba(16, 21, 69, 0.5)", backgroundColor: "#101545" }}
-        transition={{ duration: 0.3 }}
-      />
-      <p className="absolute h-[21.596px] leading-[normal] left-[1308px] not-italic text-[16px] text-white top-[18px] w-[85.22px] pointer-events-none" style={{ fontFamily: 'Days One' }}>Try It!</p>
-    </motion.div>
+        className="absolute contents left-[1283px] top-[12px]"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.98 }}
+      >
+        <motion.div
+          className="absolute bg-[#008cff] h-[35px] left-[1283px] rounded-[10px] top-[12px] w-[103px] cursor-pointer"
+          whileHover={{ boxShadow: "0 0 20px rgba(16, 21, 69, 0.5)", backgroundColor: "#101545" }}
+          transition={{ duration: 0.3 }}
+        />
+        <p className="absolute h-[21.596px] leading-[normal] left-[1308px] not-italic text-[16px] text-white top-[18px] w-[85.22px] pointer-events-none" style={{ fontFamily: 'Days One' }}>Try It!</p>
+      </motion.div>
+    </Link>
   );
 }
 
@@ -121,15 +127,17 @@ function NavBar() {
     <div className="absolute contents left-0 top-0" data-name="NavBar">
       <div className="absolute bg-white h-[60px] left-0 top-0 w-[1440px]" />
       <Group />
-      <motion.p
-        className="[text-underline-position:from-font] absolute decoration-solid font-normal h-[40px] leading-[normal] left-[1152px] text-[#101545] text-[14px] top-[22px] underline w-[105px] cursor-pointer"
-        style={{ fontVariationSettings: "'wdth' 100", fontFamily: 'Pathway Extreme' }}
-        whileHover={{ scale: 1.05, color: "#ff5416" }}
-        whileTap={{ scale: 0.95 }}
-        transition={{ duration: 0.2 }}
-      >
-        Insights
-      </motion.p>
+      <Link to="/games">
+        <motion.p
+          className="[text-underline-position:from-font] absolute decoration-solid font-normal h-[40px] leading-[normal] left-[1152px] text-[#101545] text-[14px] top-[22px] underline w-[105px] cursor-pointer"
+          style={{ fontVariationSettings: "'wdth' 100", fontFamily: 'Pathway Extreme' }}
+          whileHover={{ scale: 1.05, color: "#ff5416" }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.2 }}
+        >
+          Insights
+        </motion.p>
+      </Link>
       <motion.p
         className="[text-underline-position:from-font] absolute decoration-solid font-normal h-[40px] leading-[normal] left-[1047px] text-[#101545] text-[14px] top-[22px] underline w-[67px] cursor-pointer"
         style={{ fontVariationSettings: "'wdth' 100", fontFamily: 'Pathway Extreme' }}
@@ -148,34 +156,36 @@ function NavBar() {
       >
         Simulation
       </motion.p>
-      <motion.div
-        className="absolute h-[33px] left-[23px] top-[17px] w-[31px]"
-        data-name="Vector"
-        whileHover={{ scale: 1.1, rotate: -5 }}
-        transition={{ duration: 0.3 }}
-      >
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 31 33">
-          <g id="Vector">
-            <path d={svgPaths.p1ba871f2} fill="url(#paint0_linear_1_93)" />
-            <path d={svgPaths.peed3600} fill="url(#paint1_linear_1_93)" />
-            <path d={svgPaths.p14e54500} fill="url(#paint2_linear_1_93)" />
-          </g>
-          <defs>
-            <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_93" x1="31" x2="0" y1="16.5" y2="16.5">
-              <stop stopColor="#FF5416" />
-              <stop offset="1" stopColor="#FF2D10" />
-            </linearGradient>
-            <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_1_93" x1="31" x2="0" y1="16.5" y2="16.5">
-              <stop stopColor="#FF5416" />
-              <stop offset="1" stopColor="#FF2D10" />
-            </linearGradient>
-            <linearGradient gradientUnits="userSpaceOnUse" id="paint2_linear_1_93" x1="31" x2="0" y1="16.5" y2="16.5">
-              <stop stopColor="#FF5416" />
-              <stop offset="1" stopColor="#FF2D10" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </motion.div>
+      <Link to="/">
+        <motion.div
+          className="absolute h-[33px] left-[23px] top-[17px] w-[31px]"
+          data-name="Vector"
+          whileHover={{ scale: 1.1, rotate: -5 }}
+          transition={{ duration: 0.3 }}
+        >
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 31 33">
+            <g id="Vector">
+              <path d={svgPaths.p1ba871f2} fill="url(#paint0_linear_1_93)" />
+              <path d={svgPaths.peed3600} fill="url(#paint1_linear_1_93)" />
+              <path d={svgPaths.p14e54500} fill="url(#paint2_linear_1_93)" />
+            </g>
+            <defs>
+              <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_93" x1="31" x2="0" y1="16.5" y2="16.5">
+                <stop stopColor="#FF5416" />
+                <stop offset="1" stopColor="#FF2D10" />
+              </linearGradient>
+              <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_1_93" x1="31" x2="0" y1="16.5" y2="16.5">
+                <stop stopColor="#FF5416" />
+                <stop offset="1" stopColor="#FF2D10" />
+              </linearGradient>
+              <linearGradient gradientUnits="userSpaceOnUse" id="paint2_linear_1_93" x1="31" x2="0" y1="16.5" y2="16.5">
+                <stop stopColor="#FF5416" />
+                <stop offset="1" stopColor="#FF2D10" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </motion.div>
+      </Link>
     </div>
   );
 }
@@ -494,7 +504,8 @@ function TwitchIcon() {
   );
 }
 
-export default function App() {
+// Home Page Component (your existing page)
+function HomePage() {
   return (
     <div className="bg-gray-50 min-h-screen w-full flex justify-center overflow-x-hidden p-8" data-name="Home">
       <div 
@@ -540,5 +551,17 @@ export default function App() {
         <p className="absolute font-normal h-[167px] leading-[normal] left-[848px] text-[#101545] text-[18px] top-[3967px] w-[442px]" style={{ fontFamily: 'Fira Code' }}>Using Twitch Tracker and VGI we collect the social media mentions, stream viewership, current viewers for each game, and influencer endorsements.</p>
       </div>
     </div>
+  );
+}
+
+// Main App with Router
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/games" element={<GamesDashboard />} />
+      </Routes>
+    </Router>
   );
 }
