@@ -152,8 +152,9 @@ export function TimelineChart() {
 
   return (
     <div 
-      className="absolute bg-white rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] flex flex-col overflow-hidden"
+      className="bg-white rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] flex flex-col overflow-hidden"
       style={{
+        position: 'absolute',
         left: '68px',
         top: '1140px',
         width: '1305px',
