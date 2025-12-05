@@ -17,6 +17,7 @@ import { GENRE_REVENUE_DATA } from './GenreRevenueData';
 
 interface GenreMoneyMapProps {
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const CustomTooltip = ({ active, payload }: any) => {
@@ -44,7 +45,7 @@ const formatLogTick = (val: number) => {
   return val.toString();
 };
 
-export const GenreMoneyMap: React.FC<GenreMoneyMapProps> = ({ className }) => {
+export const GenreMoneyMap: React.FC<GenreMoneyMapProps> = ({ className, style }) => {
   const [viewMode, setViewMode] = useState<'scatter' | 'bar'>('scatter');
   const [filterMode, setFilterMode] = useState<'units' | 'revenue' | 'all'>('all');
 
@@ -82,7 +83,7 @@ export const GenreMoneyMap: React.FC<GenreMoneyMapProps> = ({ className }) => {
   const rpuLines = [10, 20, 50, 100];
 
   return (
-    <div className={`p-8 flex flex-col ${className}`}>
+    <div className={`p-8 flex flex-col ${className}`} style={style}>
       <div className="flex justify-between items-start mb-6">
         <div>
           <h2 className="font-['Days_One'] text-3xl text-slate-900 mb-2">Genre Money Map</h2>

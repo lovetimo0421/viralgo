@@ -151,7 +151,15 @@ export function TimelineChart() {
   const deselectAll = () => setSelectedGenres([]);
 
   return (
-    <div className="absolute bg-white h-[960px] left-[68px] rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] top-[1140px] w-[1305px] flex flex-col overflow-hidden">
+    <div 
+      className="absolute bg-white rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] flex flex-col overflow-hidden"
+      style={{
+        left: '68px',
+        top: '1140px',
+        width: '1305px',
+        height: '960px'
+      }}
+    >
       
       {/* Header & Controls */}
       <div className="p-6 pb-4 border-b border-slate-100 bg-slate-50/50">
