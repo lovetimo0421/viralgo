@@ -5,6 +5,9 @@ import svgPaths from "../imports/svg-t887g6hfmj";
 import imgUntitledArtwork1371 from "figma:asset/1c8ffdc7a07a1954eb76224fc2092d70f2be14c5.png";
 import imgUntitledArtwork1362 from "figma:asset/b7a01e0c0ae05cd86b8f9f2231c90fcb2980a569.png";
 import imgRectangle73 from "figma:asset/974f295ffd8a16c3d124959eceaa2f6ec70a7250.png";
+import { TimelineChart } from "./TimelineChart";
+import { GenreMoneyMap } from "./GenreMoneyMap";
+import { TopGamesChart } from "./TopGamesChart";
 
 // --- Reusable Styles from Home ---
 const NAV_LINK_STYLE = { fontVariationSettings: "'wdth' 100", fontFamily: 'Pathway Extreme' };
@@ -15,9 +18,9 @@ const BODY_FONT = { fontFamily: 'Fira Code' };
 
 function Group1() {
   return (
-    <div className="absolute contents left-[-266px] top-[6049px]">
+    <div className="absolute contents left-[-266px] top-[7359px]">
       <motion.div 
-        className="absolute left-[-266px] opacity-60 size-[1051px] top-[6049px]" 
+        className="absolute left-[-266px] opacity-60 size-[1051px] top-[7359px]" 
         data-name="Untitled_Artwork 137 1"
         whileHover={{ rotate: -5, scale: 1.05 }}
         transition={{ duration: 0.5 }}
@@ -30,9 +33,9 @@ function Group1() {
 
 function Group2() {
   return (
-    <div className="absolute contents leading-[24px] left-[calc(58.33%+1px)] text-[18px] text-nowrap text-white top-[6352px] whitespace-pre">
-      <p className="absolute font-bold left-[calc(75%-17px)] top-[6352px]" style={BODY_FONT}>Sources</p>
-      <div className="absolute font-normal left-[calc(75%-17px)] top-[6413px]" style={BODY_FONT}>
+    <div className="absolute contents leading-[24px] left-[calc(58.33%+1px)] text-[18px] text-nowrap text-white top-[7662px] whitespace-pre">
+      <p className="absolute font-bold left-[calc(75%-17px)] top-[7662px]" style={BODY_FONT}>Sources</p>
+      <div className="absolute font-normal left-[calc(75%-17px)] top-[7723px]" style={BODY_FONT}>
         <motion.p className="mb-0 cursor-pointer" whileHover={{ scale: 1.05, color: "#ff8b16" }} whileTap={{ scale: 0.95 }}>
           <a href="https://steamdb.info/charts/?sort=peak" target="_blank" rel="noopener noreferrer" className="no-underline">SteamDB</a>
         </motion.p>
@@ -57,7 +60,7 @@ function Group2() {
           <a href="https://twitchtracker.com/" target="_blank" rel="noopener noreferrer" className="no-underline">TwitchTracker</a>
         </motion.p>
       </div>
-      <div className="absolute font-normal left-[calc(58.33%+1px)] top-[6413px]" style={BODY_FONT}>
+      <div className="absolute font-normal left-[calc(58.33%+1px)] top-[7723px]" style={BODY_FONT}>
         <motion.p className="mb-0 cursor-pointer" whileHover={{ scale: 1.05, color: "#ff8b16" }} whileTap={{ scale: 0.95 }}>
           <a href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer" className="no-underline">Twitch</a>
         </motion.p>
@@ -70,16 +73,16 @@ function Group2() {
           <a href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer" className="no-underline">Steam</a>
         </motion.p>
       </div>
-      <p className="absolute font-bold left-[calc(58.33%+1px)] top-[6352px]" style={BODY_FONT}>Data</p>
+      <p className="absolute font-bold left-[calc(58.33%+1px)] top-[7662px]" style={BODY_FONT}>Data</p>
     </div>
   );
 }
 
 function Footer() {
   return (
-    <div className="absolute contents left-[-266px] top-[5669px]" data-name="Footer">
-      <div className="absolute bg-[#101545] h-[484px] left-0 top-[6273px] w-[1440px]" />
-      <div className="absolute flex h-[961px] items-center justify-center left-[-2px] top-[5669px] w-[1442px]">
+    <div className="absolute contents left-[-266px] top-[6979px]" data-name="Footer">
+      <div className="absolute bg-[#101545] h-[484px] left-0 top-[7583px] w-[1440px]" />
+      <div className="absolute flex h-[961px] items-center justify-center left-[-2px] top-[6979px] w-[1442px]">
         <div className="flex-none scale-y-[-100%]">
           <div className="h-[961px] relative w-[1442px]" data-name="Untitled_Artwork 136 2">
             <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgUntitledArtwork1362} />
@@ -94,47 +97,64 @@ function Footer() {
 
 function Group4() {
   return (
-    <div className="absolute contents left-[68px] top-[1040px]">
-      <div className="absolute bg-white h-[800px] left-[68px] rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] top-[1040px] w-[1305px]" />
-      <p className="absolute h-[133.336px] leading-[normal] left-[calc(8.33%+600.47px)] not-italic text-[80px] text-center text-white top-[1371.33px] translate-x-[-50%] w-[1126.12px]" style={HEADER_FONT}>Graph Placeholder</p>
+    <div className="absolute contents left-[68px] top-[1140px]">
+      <TimelineChart />
+      {/* <p className="absolute h-[133.336px] leading-[normal] left-[calc(8.33%+600.47px)] not-italic text-[80px] text-center text-white top-[1371.33px] translate-x-[-50%] w-[1126.12px]" style={HEADER_FONT}>Graph Placeholder</p> */}
     </div>
   );
 }
 
 function TimelineOfHitGames() {
   return (
-    <div className="absolute contents left-[68px] top-[942px]" data-name="Timeline of Hit Games">
+    <div className="absolute contents left-[68px] top-[1042px]" data-name="Timeline of Hit Games">
       <Group4 />
-      <p className="absolute h-[112px] leading-[normal] left-[90px] not-italic text-[#ff5416] text-[60px] top-[942px] w-[734px]" style={HEADER_FONT}>Timeline of Hit Games</p>
-      <p className="absolute font-normal h-[167px] leading-[24px] left-[116px] text-[#101545] text-[16px] top-[1954px] w-[1204px]" style={BODY_FONT}>This chart traces the rise of hit titles from 1980 to 2023, plotting each game by release year and total plays, with point size reflecting ratings and color indicating genre. With genre filters, time sliders, and a “show only hits” threshold, it lets you see when different eras of blockbusters emerged, which genres dominated, and how the density of standout games has changed over time.</p>
+      <p className="absolute h-[112px] leading-[normal] left-[90px] not-italic text-[#ff5416] text-[60px] top-[1015px] w-[734px]" style={HEADER_FONT}>Timeline of Hit Genres</p>
+      <p className="absolute font-normal h-[167px] leading-[24px] left-[116px] text-[#101545] text-[16px] top-[2214px] w-[1204px]" style={BODY_FONT}>This chart shows the changing shape of the market from 2010 to 2025. Each colored band is a genre, and its thickness in a given year represents that genre’s share of total peak players. By scanning across the timeline, you can see eras where certain genres swell and others fade. You can use the filter bottom to filter the genre bundles and the story buttons to see our preset trends.</p>
     </div>
   );
 }
 
 function Group5() {
   return (
-    <div className="absolute contents left-[65px] top-[2245px]">
-      <div className="absolute bg-white h-[846px] left-[65px] rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] top-[2300px] w-[1305px]" />
-      <p className="absolute h-[144.971px] leading-[normal] left-[717.47px] not-italic text-[80px] text-center text-white top-[2581.43px] translate-x-[-50%] w-[1126.12px]" style={HEADER_FONT}>Graph Placeholder</p>
+    <div className="absolute contents left-[65px] top-[2505px]">
+      <GenreMoneyMap className="absolute bg-white h-[846px] left-[65px] rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] top-[2560px] w-[1305px]" />
+
     </div>
   );
 }
 
 function Group3() {
   return (
-    <div className="absolute contents left-[154.41px] top-[2581.6px]">
-      <p className="absolute h-[99.119px] leading-[normal] left-[717.47px] not-italic text-[80px] text-center text-white top-[2581.6px] translate-x-[-50%] w-[1126.12px]" style={HEADER_FONT}>Graph Placeholder</p>
+    <div className="absolute contents left-[154.41px] top-[2841.6px]">
+
     </div>
   );
 }
 
 function ReleaseFloodVsSignal() {
   return (
-    <div className="absolute contents left-[65px] top-[2176px]" data-name="Release Flood vs. Signal">
+    <div className="absolute contents left-[65px] top-[2436px]" data-name="Release Flood vs. Signal">
       <Group5 />
-      <p className="absolute h-[112px] leading-[normal] left-[87px] not-italic text-[#ff5416] text-[60px] top-[2176px] w-[1011px]" style={HEADER_FONT}>Release Flood vs. Signal</p>
+      <p className="absolute h-[112px] leading-[normal] left-[87px] not-italic text-[#ff5416] text-[60px] top-[2436px] w-[1011px]" style={HEADER_FONT}>Where's the Money?</p>
       <Group3 />
-      <p className="absolute font-normal h-[167px] leading-[24px] left-[113px] text-[#101545] text-[16px] top-[3202px] w-[1204px]" style={BODY_FONT}>This paired timeline compares how many games are released each month (2017–2025) against the total plays earned by titles launched in that same window. By brushing over busy or quiet periods and toggling smoothing, you can see whether surges in releases actually translate into more hits, or if an oversupply of games just spreads player attention thinner.</p>
+      <p className="absolute font-normal h-[167px] leading-[24px] left-[113px] text-[#101545] text-[16px] top-[3497px] w-[1204px]" style={BODY_FONT}>Here we compare genres not just by how popular they are, but by how they perform as businesses over the same period. Each point represents a genre, positioned by its average units sold (horizontal axis) and average revenue (vertical axis), with bubble size indicating revenue per unit. Genres in the top-right corner are true blockbusters, while those higher up but closer to the left are “premium niches” that earn a lot from relatively fewer players.</p>
+    </div>
+  );
+}
+
+function TopGamesSection() {
+  return (
+    <div className="absolute contents left-[65px] top-[3714px]" data-name="Top Games Section">
+       <p className="absolute h-[112px] leading-[normal] left-[87px] not-italic text-[#ff5416] text-[60px] top-[3714px] w-[1011px]" style={HEADER_FONT}>Top Games by Year</p>
+       
+       {/* Chart Container */}
+       <div className="absolute left-[65px] top-[3850px] w-[1305px] h-[600px] bg-white rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] p-4">
+          <TopGamesChart className="w-full h-full" />
+       </div>
+
+       <p className="absolute font-normal h-[167px] leading-[24px] left-[113px] text-[#101545] text-[16px] top-[4525px] w-[1204px]" style={BODY_FONT}>
+         For each year, this chart lists the top games by their peak Steam player counts. The colors show their primary genres, and the bar length shows how large each game loomed in that year’s landscape. It ties the abstract genre trends above back to the specific releases that defined each era.
+       </p>
     </div>
   );
 }
@@ -143,7 +163,7 @@ function HistoryOfPopularity() {
   return (
     <div className="absolute contents left-[118px] top-[544px]" data-name="History of Popularity">
       <p className="absolute h-[112px] leading-[normal] left-[calc(8.33%+599.5px)] not-italic text-[#101545] text-[80px] text-center top-[544px] translate-x-[-50%] w-[1049px]" style={HEADER_FONT}>History of Popularity</p>
-      <p className="absolute font-normal h-[167px] leading-[24px] left-[118px] text-[#101545] text-[16px] top-[720px] w-[1204px]" style={BODY_FONT}>“History of Popularity” zooms in on when games actually became hits and how release volume shapes that success. Using decades of release dates, plays, ratings, and recent monthly release counts, these two charts show how standout titles cluster across time and how waves of new releases interact with player attention.</p>
+      <p className="absolute font-normal h-[167px] leading-[24px] left-[118px] text-[#101545] text-[16px] top-[720px] w-[1204px]" style={BODY_FONT}>In History of Popularity, we’re trying to answer a deceptively simple question: what actually became big, and when? Over the past fifteen years, different genres have taken turns owning the charts—strategy and RPGs in the early 2010s, the MOBA wave, the rise of survival sandboxes, and the current era of tactical and hero shooters. But popularity on its own isn’t the whole story. Which of these genres turned their peaks into real money? Are there categories that sell fewer copies but earn far more per player? And when we zoom in from genres to individual titles, which specific games were carrying those trends? The first three graphs in this section walk through that arc: from the big-picture genre timeline, to the economics of each genre, down to the yearly hit lists that made those curves possible.</p>
       <div className="absolute h-0 left-[calc(25%+111px)] top-[658px] w-[498px]">
         <div className="absolute bottom-0 left-0 right-0 top-[-3px]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 498 3">
@@ -157,10 +177,10 @@ function HistoryOfPopularity() {
 
 function HistoryOfPopularity1() {
   return (
-    <div className="absolute contents left-[116px] top-[3494px]" data-name="History of Popularity">
-      <p className="absolute h-[112px] leading-[normal] left-[calc(8.33%+597.5px)] not-italic text-[#101545] text-[80px] text-center top-[3494px] translate-x-[-50%] w-[1049px]" style={HEADER_FONT}>Genre Economics</p>
-      <p className="absolute font-normal h-[167px] leading-[24px] left-[116px] text-[#101545] text-[16px] top-[3681px] w-[1204px]" style={BODY_FONT}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <div className="absolute h-0 left-[calc(25%+109px)] top-[3624px] w-[498px]">
+    <div className="absolute contents left-[116px] top-[4804px]" data-name="History of Popularity">
+      <p className="absolute h-[112px] leading-[normal] left-[calc(8.33%+597.5px)] not-italic text-[#101545] text-[80px] text-center top-[4804px] translate-x-[-50%] w-[1049px]" style={HEADER_FONT}>Hype Today</p>
+      <p className="absolute font-normal h-[167px] leading-[24px] left-[116px] text-[#101545] text-[16px] top-[4991px] w-[1204px]" style={BODY_FONT}>If the first section is about who won the last fifteen years according to Steam Data, this section is about how players actually spend their time and attention right now. Using thousands of recent data points across platforms, we look at: how many people show up every day, how long they stay, how much they spend, and how loudly they talk about it online. Is the obvious rule“Most games that do well on social media do well itself”right? Or are there Genre outliers where players quietly log long sessions and strong revenue without ever dominating timelines or streams? </p>
+      <div className="absolute h-0 left-[calc(25%+109px)] top-[4934px] w-[498px]">
         <div className="absolute bottom-0 left-0 right-0 top-[-3px]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 498 3">
             <line id="Line 1" stroke="var(--stroke-0, #FF5416)" strokeWidth="3" x2="498" y1="1.5" y2="1.5" />
@@ -301,13 +321,14 @@ export function GameDashboard() {
   return (
     <div className="bg-gray-50 min-h-screen w-full flex justify-center overflow-x-hidden p-8" data-name="Data">
       <div 
-        className="bg-white relative w-full max-w-[1440px] h-[6757px] overflow-hidden shadow-xl"
+        className="bg-white relative w-full max-w-[1440px] h-[8067px] overflow-hidden shadow-xl"
         style={{ border: '1px solid #101545' }}
       >
           <Footer />
           <Group6 />
           <TimelineOfHitGames />
           <ReleaseFloodVsSignal />
+          <TopGamesSection />
           <HistoryOfPopularity />
           <HistoryOfPopularity1 />
           <NavBar />
