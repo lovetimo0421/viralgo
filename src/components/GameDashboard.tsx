@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import svgPaths from "../imports/svg-t887g6hfmj";
+import "../styles/gamedashboard.css";
 import imgUntitledArtwork1371 from "figma:asset/1c8ffdc7a07a1954eb76224fc2092d70f2be14c5.png";
 import imgUntitledArtwork1362 from "figma:asset/b7a01e0c0ae05cd86b8f9f2231c90fcb2980a569.png";
 import imgRectangle73 from "figma:asset/974f295ffd8a16c3d124959eceaa2f6ec70a7250.png";
