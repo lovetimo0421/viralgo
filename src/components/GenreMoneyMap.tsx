@@ -83,8 +83,11 @@ export const GenreMoneyMap: React.FC<GenreMoneyMapProps> = ({ className, style }
   const rpuLines = [10, 20, 50, 100];
 
   return (
-    <div className={`p-8 flex flex-col ${className}`} style={style}>
-      <div className="flex justify-between items-start mb-6">
+    <div 
+      className={`p-8 flex flex-col ${className}`} 
+      style={{ display: 'flex', flexDirection: 'column', ...style }}
+    >
+      <div className="flex justify-between items-start mb-6" style={{ flexShrink: 0 }}>
         <div>
           <h2 className="font-['Days_One'] text-3xl text-slate-900 mb-2">Genre Money Map</h2>
           <p className="text-slate-500 max-w-2xl text-sm">
@@ -124,7 +127,10 @@ export const GenreMoneyMap: React.FC<GenreMoneyMapProps> = ({ className, style }
         </div>
       </div>
 
-      <div className="flex-grow bg-slate-50 rounded-xl border border-slate-200 p-4 relative min-h-0">
+      <div 
+        className="flex-grow bg-slate-50 rounded-xl border border-slate-200 p-4 relative min-h-0"
+        style={{ flex: 1, minHeight: 0, position: 'relative' }}
+      >
         {/* Subtle background labels for quadrants - Positioned to avoid overlapping axis labels */}
         {viewMode === 'scatter' && (
           <>

@@ -29,20 +29,31 @@ const GenreChip = ({ genre, isSelected, onClick }: { genre: string; isSelected: 
       style={{
         backgroundColor: isSelected ? GENRE_COLORS[genre] : undefined,
         borderColor: isSelected ? GENRE_COLORS[genre] : undefined,
-        fontFamily: 'Pathway Extreme'
+        fontFamily: 'Pathway Extreme',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '12px',
+        padding: '10px 12px',
+        width: '100%'
       }}
     >
       {/* Color Dot */}
       <div className={cn(
         "w-3 h-3 rounded-full border shadow-sm shrink-0 transition-colors",
         isSelected ? "bg-white/40 border-white/40" : "bg-slate-100 border-slate-300 group-hover:border-slate-400"
-      )} style={!isSelected ? { backgroundColor: GENRE_COLORS[genre] } : {}} />
+      )} style={{
+        width: '12px',
+        height: '12px',
+        borderRadius: '50%',
+        flexShrink: 0,
+        ...(!isSelected ? { backgroundColor: GENRE_COLORS[genre] } : {})
+      }} />
       
-      <span className="truncate font-medium">{genre}</span>
+      <span className="truncate font-medium" style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{genre}</span>
       
       {isSelected && (
-        <div className="ml-auto bg-white/20 p-0.5 rounded-full">
-          <Check className="w-3 h-3" strokeWidth={3} />
+        <div className="ml-auto bg-white/20 p-0.5 rounded-full" style={{ marginLeft: 'auto' }}>
+          <Check className="w-3 h-3" strokeWidth={3} style={{ width: '12px', height: '12px' }} />
         </div>
       )}
     </button>
@@ -58,9 +69,15 @@ const StoryButton = ({ title, icon: Icon, onClick, active }: { title: string; ic
         ? "bg-slate-800 text-white border-slate-800 ring-2 ring-slate-200" 
         : "bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:text-slate-900"
     )}
-    style={{ fontFamily: 'Pathway Extreme' }}
+    style={{ 
+      fontFamily: 'Pathway Extreme',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px',
+      padding: '10px 20px'
+    }}
   >
-    <Icon className={cn("w-4 h-4", active ? "text-yellow-400" : "text-slate-400 group-hover:text-slate-600")} />
+    <Icon className={cn("w-4 h-4", active ? "text-yellow-400" : "text-slate-400 group-hover:text-slate-600")} style={{ width: '16px', height: '16px' }} />
     {title}
   </button>
 );
@@ -152,29 +169,37 @@ export function TimelineChart() {
 
   return (
     <div 
-      className="bg-white rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] flex flex-col overflow-hidden"
+      className="bg-white rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] overflow-hidden"
       style={{
         position: 'absolute',
         left: '68px',
         top: '1140px',
         width: '1305px',
-        height: '960px'
+        height: '960px',
+        display: 'flex',
+        flexDirection: 'column'
       }}
     >
       
       {/* Header & Controls */}
-      <div className="p-6 pb-4 border-b border-slate-100 bg-slate-50/50">
-        <div className="flex justify-between items-end">
+      <div 
+        className="p-6 pb-4 border-b border-slate-100 bg-slate-50/50"
+        style={{
+            padding: '24px 24px 16px 24px',
+            borderBottom: '1px solid #f1f5f9'
+        }}
+      >
+        <div className="flex justify-between items-end" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
           <div>
-            <h3 className="text-lg text-slate-500 mb-1" style={{ fontFamily: 'Days One' }}>Market Evolution</h3>
-            <p className="text-slate-400 text-sm" style={{ fontFamily: 'Pathway Extreme' }}>
+            <h3 className="text-lg text-slate-500 mb-1" style={{ fontFamily: 'Days One', fontSize: '18px', marginBottom: '4px' }}>Market Evolution</h3>
+            <p className="text-slate-400 text-sm" style={{ fontFamily: 'Pathway Extreme', fontSize: '14px' }}>
               Analyze trends across 30 genres. Showing {selectedGenres.length} of {GENRES.length} genres.
             </p>
           </div>
           
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             {/* Quick Stories */}
-            <div className="flex gap-3 mr-6">
+            <div className="flex gap-3 mr-6" style={{ display: 'flex', gap: '12px', marginRight: '24px' }}>
                <StoryButton 
                  title="Battle Royale Rise" 
                  icon={TrendingUp} 
@@ -195,13 +220,16 @@ export function TimelineChart() {
             {/* Genre Filter Popover */}
             <Popover>
               <PopoverTrigger asChild>
-                <button className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm">
-                  <Filter className="w-4 h-4" />
+                <button 
+                  className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm"
+                  style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 16px' }}
+                >
+                  <Filter className="w-4 h-4" style={{ width: '16px', height: '16px' }} />
                   Filter Genres
                   <span className="bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded text-[10px] min-w-[20px]">
                     {selectedGenres.length}
                   </span>
-                  <ChevronDown className="w-3 h-3 text-slate-400" />
+                  <ChevronDown className="w-3 h-3 text-slate-400" style={{ width: '12px', height: '12px' }} />
                 </button>
               </PopoverTrigger>
               <PopoverContent className="w-[800px] p-0" align="end" sideOffset={8}>
@@ -246,10 +274,19 @@ export function TimelineChart() {
       </div>
 
       {/* Chart Section */}
-      <div className="flex-1 w-full p-6 min-h-0 relative">
+      <div 
+        className="relative"
+        style={{
+            flex: 1,
+            width: '100%',
+            padding: '24px',
+            minHeight: 0,
+            position: 'relative'
+        }}
+      >
          {/* Background hint if no genres selected */}
          {selectedGenres.length === 0 && (
-            <div className="absolute inset-0 flex items-center justify-center z-0">
+            <div className="absolute inset-0 flex items-center justify-center z-0" style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <p className="text-slate-300 text-xl font-medium">Select genres to view data</p>
             </div>
          )}
@@ -303,8 +340,20 @@ export function TimelineChart() {
       </div>
 
       {/* Slider Section */}
-      <div className="h-20 px-12 bg-white border-t border-slate-100 flex items-center flex-col justify-center shrink-0">
-        <div className="w-full mb-2 flex justify-between text-sm font-bold text-slate-600" style={{ fontFamily: 'Days One' }}>
+      <div 
+        className="h-20 px-12 bg-white border-t border-slate-100 flex items-center flex-col justify-center shrink-0"
+        style={{
+            height: '80px',
+            padding: '0 48px',
+            borderTop: '1px solid #f1f5f9',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexShrink: 0
+        }}
+      >
+        <div className="w-full mb-2 flex justify-between text-sm font-bold text-slate-600" style={{ fontFamily: 'Days One', width: '100%', marginBottom: '8px', display: 'flex', justifyContent: 'space-between' }}>
           <span>{yearRange[0]}</span>
           <span>{yearRange[1]}</span>
         </div>
@@ -316,6 +365,7 @@ export function TimelineChart() {
           step={1}
           onValueChange={(val) => setYearRange(val)}
           className="w-full"
+          style={{ width: '100%' }}
         />
       </div>
     </div>

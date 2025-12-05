@@ -111,10 +111,13 @@ export function TopGamesChart({ className }: { className?: string }) {
 
   return (
     <div className={className}>
-      <div className="flex flex-col items-center w-full h-full">
+      <div 
+        className="flex flex-col items-center w-full h-full"
+        style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%', alignItems: 'center' }}
+      >
         
         {/* Year Slider */}
-        <div className="w-[80%] mb-6 flex items-center gap-4">
+        <div className="w-[80%] mb-6 flex items-center gap-4" style={{ flexShrink: 0 }}>
           <span className="font-bold text-[#101545]" style={BODY_FONT}>2010</span>
           <input 
             type="range" 
@@ -127,12 +130,15 @@ export function TopGamesChart({ className }: { className?: string }) {
           <span className="font-bold text-[#101545]" style={BODY_FONT}>2025</span>
         </div>
 
-        <div className="text-center mb-4">
+        <div className="text-center mb-4" style={{ flexShrink: 0 }}>
             <span className="text-2xl font-bold text-[#ff5416]" style={BODY_FONT}>Year: {year}</span>
         </div>
 
         {/* Chart */}
-        <div className="w-full flex-1 pr-12"> {/* Right padding for labels */}
+        <div 
+          className="w-full pr-12" 
+          style={{ flex: 1, minHeight: 0, width: '100%', paddingRight: '48px' }}
+        > {/* Right padding for labels */}
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               data={data}
