@@ -1,7 +1,5 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { cn } from "./ui/utils";
-
-// --- Types & Data ---
 
 type Platform = 'PC' | 'Console' | 'Mobile' | 'VR';
 
@@ -18,66 +16,8 @@ interface HeatmapData {
   totalDau: number; // For sorting
 }
 
-// Data from screenshot
-const RAW_DATA: HeatmapData[] = [
-  {
-    genre: 'Action',
-    platforms: {
-      Console: { duration: 59.86, dau: 44411, revenue: 44904, count: 285 },
-      Mobile: { duration: 25.09, dau: 93842, revenue: 102547, count: 259 },
-      PC: { duration: 46.23, dau: 53637, revenue: 74518, count: 253 },
-      VR: { duration: 21.4, dau: 1853, revenue: 23281, count: 275 }
-    },
-    totalDau: 44411 + 93842 + 53637 + 1853
-  },
-  {
-    genre: 'Adventure',
-    platforms: {
-      Console: { duration: 58.87, dau: 44788, revenue: 48474, count: 246 },
-      Mobile: { duration: 26.06, dau: 91210, revenue: 110459, count: 221 },
-      PC: { duration: 47.62, dau: 57310, revenue: 67430, count: 261 },
-      VR: { duration: 21.48, dau: 1870, revenue: 23823, count: 230 }
-    },
-    totalDau: 44788 + 91210 + 57310 + 1870
-  },
-  {
-    genre: 'FPS',
-    platforms: {
-      Console: { duration: 56.73, dau: 44870, revenue: 48981, count: 244 },
-      Mobile: { duration: 26.17, dau: 86462, revenue: 100839, count: 237 },
-      PC: { duration: 47.93, dau: 55051, revenue: 70170, count: 244 },
-      VR: { duration: 22.89, dau: 1890, revenue: 22328, count: 260 }
-    },
-    totalDau: 44870 + 86462 + 55051 + 1890
-  },
-  {
-    genre: 'RPG',
-    platforms: {
-      Console: { duration: 60.68, dau: 43337, revenue: 44363, count: 237 },
-      Mobile: { duration: 25.1, dau: 94118, revenue: 103652, count: 265 },
-      PC: { duration: 46.69, dau: 53924, revenue: 73280, count: 248 },
-      VR: { duration: 21.35, dau: 1846, revenue: 23690, count: 254 }
-    },
-    totalDau: 43337 + 94118 + 53924 + 1846
-  },
-  {
-    genre: 'Simulation',
-    platforms: {
-      Console: { duration: 60.12, dau: 45249, revenue: 48206, count: 231 },
-      Mobile: { duration: 24.94, dau: 43374, revenue: 101116, count: 244 },
-      PC: { duration: 49.34, dau: 55894, revenue: 68822, count: 244 },
-      VR: { duration: 22.45, dau: 1816, revenue: 23232, count: 251 }
-    },
-    totalDau: 45249 + 43374 + 55894 + 1816
-  }
-];
-
 const ALL_PLATFORMS: Platform[] = ['PC', 'Console', 'Mobile', 'VR'];
 
-// --- Color Scale ---
-// Min ~20, Max ~60
-// Light (20) -> Dark (60)
-// Using a blue/purple scale
 const getColor = (value: number) => {
   if (value < 25) return '#e0f2fe'; // sky-100
   if (value < 35) return '#bae6fd'; // sky-200
@@ -96,6 +36,34 @@ export function TimeSpentHeatmap({ className, style }: { className?: string, sty
   const [sortMode, setSortMode] = useState<'All' | 'TopDAU'>('All');
   const [activePlatforms, setActivePlatforms] = useState<Platform[]>(['PC', 'Console', 'Mobile', 'VR']);
   const [hoveredCell, setHoveredCell] = useState<{ genre: string, platform: Platform } | null>(null);
+  const [data, setData] = useState<HeatmapData[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const res = await fetch("https://jefraydi.webdev.iyaserver.com/acad274/Viralgo/time_spent_heatmap.php");
+        if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+        const json = await res.json();
+        const items: HeatmapData[] = Array.isArray(json.items) ? json.items : [];
+        if (!isMounted) return;
+        setData(items);
+      } catch (err: any) {
+        console.error("Time spent heatmap fetch failed", err);
+        if (!isMounted) return;
+        setError("Live time-spent data unavailable.");
+        setData([]);
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    };
+    fetchData();
+    return () => { isMounted = false; };
+  }, []);
 
   const togglePlatform = (p: Platform) => {
     if (activePlatforms.includes(p)) {
@@ -106,13 +74,12 @@ export function TimeSpentHeatmap({ className, style }: { className?: string, sty
   };
 
   const sortedData = useMemo(() => {
-    let data = [...RAW_DATA];
+    let items = [...data];
     if (sortMode === 'TopDAU') {
-      data.sort((a, b) => b.totalDau - a.totalDau);
+      items.sort((a, b) => b.totalDau - a.totalDau);
     }
-    // "All" is default, which is just the raw list (already somewhat alphabetical/grouped)
-    return data;
-  }, [sortMode]);
+    return items;
+  }, [data, sortMode]);
 
   return (
     <div 
@@ -133,6 +100,8 @@ export function TimeSpentHeatmap({ className, style }: { className?: string, sty
            <p className="text-slate-400 text-sm" style={{ fontFamily: 'Pathway Extreme' }}>
              Avg. Minutes per Session by Genre & Platform
            </p>
+           {loading && <p className="text-xs text-slate-400">Loading time-spent data...</p>}
+           {error && <p className="text-xs text-amber-600">{error}</p>}
         </div>
 
         <div className="flex gap-6 items-center" style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
@@ -184,7 +153,18 @@ export function TimeSpentHeatmap({ className, style }: { className?: string, sty
       {/* Chart Area */}
       <div className="flex-1 p-8 overflow-auto" style={{ padding: '32px' }}>
         <div className="w-full h-full flex flex-col">
-            
+            {loading && (
+              <div className="flex-1 flex items-center justify-center text-slate-400 text-sm">
+                Loading data...
+              </div>
+            )}
+            {!loading && sortedData.length === 0 && (
+              <div className="flex-1 flex items-center justify-center text-slate-400 text-sm">
+                No data available.
+              </div>
+            )}
+            {sortedData.length > 0 && (
+            <>
             {/* Header Row */}
             <div className="flex mb-2">
                 <div className="w-48 flex-shrink-0"></div> {/* Spacer for Genre Labels */}
@@ -269,6 +249,8 @@ export function TimeSpentHeatmap({ className, style }: { className?: string, sty
                     <span className="text-xs text-slate-500" style={{ fontFamily: 'Fira Code' }}>&gt;60m</span>
                 </div>
             </div>
+            </>
+            )}
 
         </div>
       </div>

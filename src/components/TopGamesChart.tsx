@@ -70,17 +70,8 @@ const CustomYAxisTick = (props: any) => {
   );
 };
 
-// Custom bar label
 const CustomBarLabel = (props: any) => {
-  const { x, y, width, height, value, name, genres } = props;
-  // If bar is wide enough, put text inside, otherwise outside? 
-  // For now, let's put name inside left, and value inside right.
-  // Actually user asked: Inside or at the end: Game Name, Peak Load, Genre.
-  
-  // Let's put text at the end of the bar (outside) if it's short, or just inside.
-  // Simplest is to put it slightly inside the bar if possible, or to the right.
-  // Given the design request, let's put the Peak Load # to the right of the bar.
-  
+  const { x, y, width, height, value } = props;
   return (
     <text 
       x={x + width + 5} 
@@ -112,7 +103,6 @@ export function TopGamesChart({ className }: { className?: string }) {
         const json: TopGamesResponse = await res.json();
         const items = Array.isArray(json.items) ? json.items : [];
         if (!isMounted) return;
-        // ensure numbers
         const cleaned = items.map((item) => ({
           rank: Number(item.rank) || 0,
           name: item.name || "Unknown",
