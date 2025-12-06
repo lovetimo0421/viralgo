@@ -254,31 +254,10 @@ function Group6() {
   );
 }
 
-function TryItButton() {
-  return (
-    <Link to="/games">
-      <motion.div 
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.98 }}
-      >
-        <motion.div 
-          className="bg-[#008cff] rounded-[10px] cursor-pointer"
-          style={{ position: 'absolute', height: '35px', left: '1283px', top: '12px', width: '103px' }}
-          whileHover={{ boxShadow: "0 0 20px rgba(16, 21, 69, 0.5)", backgroundColor: "#101545" }}
-          transition={{ duration: 0.3 }}
-        />
-        <p className="leading-[normal] not-italic text-[16px] text-white pointer-events-none" style={{ ...HEADER_FONT, position: 'absolute', height: '21.596px', left: '1308px', top: '18px', width: '85.22px' }}>Try It!</p>
-      </motion.div>
-    </Link>
-  );
-}
-
 function NavBar() {
   return (
     <div data-name="NavBar">
       <div className="bg-white" style={{ position: 'absolute', height: '60px', left: '0', top: '0', width: '1440px' }} />
-      
-      <TryItButton />
       
       <Link to="/insights">
         <motion.p 
