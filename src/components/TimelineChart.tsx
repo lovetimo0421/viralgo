@@ -127,7 +127,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   );
 };
 
-export function TimelineChart() {
+export function TimelineChart({ className, style }: { className?: string; style?: React.CSSProperties }) {
   const [selectedGenres, setSelectedGenres] = useState<string[]>(GENRES);
   const [yearRange, setYearRange] = useState<number[]>([START_YEAR, END_YEAR]);
 
@@ -169,15 +169,11 @@ export function TimelineChart() {
 
   return (
     <div 
-      className="bg-white rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] overflow-hidden"
+      className={cn("bg-white rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] overflow-hidden", className)}
       style={{
-        position: 'absolute',
-        left: '68px',
-        top: '1140px',
-        width: '1305px',
-        height: '960px',
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        ...style
       }}
     >
       
