@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   ScatterChart,
   Scatter,
@@ -11,11 +11,6 @@ import {
 } from 'recharts';
 import { cn } from "./ui/utils";
 
-// --- Mock Data (Based on user provided image) ---
-// Platforms: PC, Console, Mobile, VR
-// Fields: Platform, DAU, Stream_Viewership, Revenue
-// ~50 rows
-
 const PLATFORMS = ['PC', 'Console', 'Mobile', 'VR'];
 const PLATFORM_COLORS: Record<string, string> = {
   PC: '#2E93fA',      // Blue
@@ -24,34 +19,15 @@ const PLATFORM_COLORS: Record<string, string> = {
   VR: '#9C27B0'       // Purple
 };
 
-// Helper to generate random data similar to the screenshot
-const generateData = () => {
-  const data = [];
-  for (let i = 0; i < 50; i++) {
-    const platform = PLATFORMS[Math.floor(Math.random() * PLATFORMS.length)];
-    
-    // Base ranges based on screenshot
-    // Stream Viewership: 99k - 112k (Log scale effective range)
-    // DAU: 28k - 198k
-    // Revenue: 16k - 140k
-    
-    const streamViewership = Math.floor(99000 + Math.random() * 15000); 
-    const dau = Math.floor(10000 + Math.random() * 190000);
-    const revenue = Math.floor(15000 + Math.random() * 130000);
-    
-    data.push({
-      id: i,
-      platform,
-      streamViewership,
-      dau,
-      revenue,
-      name: `Game ${i+1}` // Placeholder name
-    });
-  }
-  return data;
+type HypeItem = {
+  id: number;
+  platform: string;
+  dau: number;
+  streamViewership: number;
+  revenue: number;
+  date?: string;
+  genre?: string;
 };
-
-const MOCK_DATA = generateData();
 
 // --- Components ---
 
@@ -78,11 +54,48 @@ const CustomDot = (props: any) => {
 export function HypeCloudChart({ className, style }: { className?: string, style?: React.CSSProperties }) {
   const [yAxisMode, setYAxisMode] = useState<'DAU' | 'Revenue'>('DAU');
   const [platformFilter, setPlatformFilter] = useState<string>('All');
+  const [data, setData] = useState<HypeItem[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const res = await fetch("https://jefraydi.webdev.iyaserver.com/acad274/Viralgo/hype_cloud.php");
+        if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+        const json = await res.json();
+        const items: HypeItem[] = Array.isArray(json.items) ? json.items : [];
+        const cleaned = items.map((item, idx) => ({
+          id: Number(item.id ?? idx),
+          platform: item.platform || "Unknown",
+          dau: Number(item.dau) || 0,
+          streamViewership: Number(item.streamViewership) || 0,
+          revenue: Number(item.revenue) || 0,
+          date: item.date,
+          genre: item.genre,
+        }));
+        if (!isMounted) return;
+        setData(cleaned);
+      } catch (err: any) {
+        console.error("Hype cloud fetch failed", err);
+        if (!isMounted) return;
+        setError("Live hype data unavailable.");
+        setData([]);
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    };
+    fetchData();
+    return () => { isMounted = false; };
+  }, []);
 
   const filteredData = useMemo(() => {
-    if (platformFilter === 'All') return MOCK_DATA;
-    return MOCK_DATA.filter(d => d.platform === platformFilter);
-  }, [platformFilter]);
+    if (platformFilter === 'All') return data;
+    return data.filter(d => d.platform === platformFilter);
+  }, [data, platformFilter]);
 
   return (
     <div 
@@ -101,8 +114,10 @@ export function HypeCloudChart({ className, style }: { className?: string, style
         <div>
            <h3 className="text-xl text-[#101545] mb-1" style={{ fontFamily: 'Days One' }}>Platform Play Cloud</h3>
            <p className="text-slate-400 text-sm" style={{ fontFamily: 'Pathway Extreme' }}>
-             4989 data points | Logarithmic Scale
+             {data.length ? `${data.length} data points` : "Logarithmic Scale"}
            </p>
+           {loading && <p className="text-xs text-slate-400">Loading hype data...</p>}
+           {error && <p className="text-xs text-amber-600">{error}</p>}
         </div>
 
         <div className="flex gap-6 items-center" style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
@@ -148,11 +163,21 @@ export function HypeCloudChart({ className, style }: { className?: string, style
       </div>
 
       {/* Chart Area */}
-      <div 
-        className="relative w-full min-h-0 flex-1 p-4"
-        style={{ flex: 1, minHeight: 0, width: '100%', padding: '16px', position: 'relative' }}
-      >
-        <ResponsiveContainer width="100%" height="100%">
+        <div 
+          className="relative w-full min-h-0 flex-1 p-4"
+          style={{ flex: 1, minHeight: 0, width: '100%', padding: '16px', position: 'relative' }}
+        >
+        {loading && (
+          <div className="absolute inset-0 flex items-center justify-center text-slate-400 text-sm pointer-events-none">
+            Loading data...
+          </div>
+        )}
+        {!loading && filteredData.length === 0 && (
+          <div className="absolute inset-0 flex items-center justify-center text-slate-400 text-sm pointer-events-none">
+            No data available.
+          </div>
+        )}
+          <ResponsiveContainer width="100%" height="100%">
           <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
             <XAxis 
