@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BarChart,
   Bar,
@@ -12,31 +12,21 @@ import {
 } from "recharts";
 import { motion } from "motion/react";
 
-// Mock data for a single year (used for all years for now)
-const MOCK_DATA_TEMPLATE = [
-  { rank: 1, name: "Counter-Strike 2", genres: "Action;FPS;Multiplayer", peak: 1862531, allTimePeak: 1862531 },
-  { rank: 2, name: "Monster Hunter Wilds", genres: "Action;Adventure;RPG", peak: 1384608, allTimePeak: 1384608 },
-  { rank: 3, name: "PUBG: BATTLEGROUNDS", genres: "Action;Massively Multiplayer", peak: 1347327, allTimePeak: 3257248 },
-  { rank: 4, name: "Dota 2", genres: "Action;Strategy;MOBA", peak: 961289, allTimePeak: 1295114 },
-  { rank: 5, name: "Marvel Rivals", genres: "Action;Multiplayer;Hero Shooter", peak: 644269, allTimePeak: 644269 },
-  { rank: 6, name: "Hollow Knight: Silksong", genres: "Action;Adventure;Indie", peak: 587150, allTimePeak: 587150 },
-  { rank: 7, name: "ARC Raiders", genres: "Action", peak: 462488, allTimePeak: 462488 },
-  { rank: 8, name: "Schedule I", genres: "Action;Indie;Simulation", peak: 459075, allTimePeak: 459075 },
-  { rank: 9, name: "Apex Legends", genres: "Action;FPS;Battle Royale", peak: 412000, allTimePeak: 624473 },
-  { rank: 10, name: "Grand Theft Auto V", genres: "Action;Open World", peak: 350000, allTimePeak: 364548 }
-];
+type TopGame = {
+  rank: number;
+  name: string;
+  genres: string;
+  peak: number;
+  allTimePeak: number;
+};
 
-// Generate data for 2010-2025
-const YEARS = Array.from({ length: 16 }, (_, i) => 2010 + i);
-const ALL_DATA: Record<number, typeof MOCK_DATA_TEMPLATE> = {};
+interface TopGamesResponse {
+  year: number;
+  items: TopGame[];
+}
 
-YEARS.forEach(year => {
-  // Slightly randomize or just copy data
-  ALL_DATA[year] = MOCK_DATA_TEMPLATE.map(item => ({
-    ...item,
-    peak: Math.round(item.peak * (1 + (Math.random() * 0.2 - 0.1))), // +/- 10% variation
-  })).sort((a, b) => b.peak - a.peak);
-});
+const START_YEAR = 2010;
+const END_YEAR = 2025;
 
 const COLORS = [
   "#FF5416", // Brand Orange
@@ -106,8 +96,43 @@ const CustomBarLabel = (props: any) => {
 };
 
 export function TopGamesChart({ className }: { className?: string }) {
-  const [year, setYear] = useState(2025);
-  const data = ALL_DATA[year];
+  const [year, setYear] = useState(END_YEAR);
+  const [data, setData] = useState<TopGame[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const res = await fetch(`https://jefraydi.webdev.iyaserver.com/acad274/Viralgo/top_games_by_year.php?year=${year}`);
+        if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+        const json: TopGamesResponse = await res.json();
+        const items = Array.isArray(json.items) ? json.items : [];
+        if (!isMounted) return;
+        // ensure numbers
+        const cleaned = items.map((item) => ({
+          rank: Number(item.rank) || 0,
+          name: item.name || "Unknown",
+          genres: item.genres || "",
+          peak: Number(item.peak) || 0,
+          allTimePeak: Number(item.allTimePeak) || 0,
+        })).sort((a, b) => b.peak - a.peak);
+        setData(cleaned);
+      } catch (err: any) {
+        console.error("Top games fetch failed", err);
+        if (!isMounted) return;
+        setError("Live top games data unavailable.");
+        setData([]);
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    };
+    fetchData();
+    return () => { isMounted = false; };
+  }, [year]);
 
   return (
     <div className={className}>
@@ -118,20 +143,22 @@ export function TopGamesChart({ className }: { className?: string }) {
         
         {/* Year Slider */}
         <div className="w-[80%] mb-6 flex items-center gap-4" style={{ flexShrink: 0 }}>
-          <span className="font-bold text-[#101545]" style={BODY_FONT}>2010</span>
+          <span className="font-bold text-[#101545]" style={BODY_FONT}>{START_YEAR}</span>
           <input 
             type="range" 
-            min="2010" 
-            max="2025" 
+            min={START_YEAR} 
+            max={END_YEAR} 
             value={year} 
             onChange={(e) => setYear(parseInt(e.target.value))}
             className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#ff5416]"
           />
-          <span className="font-bold text-[#101545]" style={BODY_FONT}>2025</span>
+          <span className="font-bold text-[#101545]" style={BODY_FONT}>{END_YEAR}</span>
         </div>
 
         <div className="text-center mb-4" style={{ flexShrink: 0 }}>
             <span className="text-2xl font-bold text-[#ff5416]" style={BODY_FONT}>Year: {year}</span>
+            {loading && <p className="text-xs text-slate-400 mt-1">Loading top games...</p>}
+            {error && <p className="text-xs text-amber-600 mt-1">{error}</p>}
         </div>
 
         {/* Chart */}
