@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   ScatterChart,
   Scatter,
@@ -13,7 +13,7 @@ import {
   Bar,
   Cell
 } from 'recharts';
-import { GENRE_REVENUE_DATA } from './GenreRevenueData';
+import { GenreRevenueData, getGenreColor } from './GenreRevenueData';
 
 interface GenreMoneyMapProps {
   className?: string;
@@ -48,32 +48,75 @@ const formatLogTick = (val: number) => {
 export const GenreMoneyMap: React.FC<GenreMoneyMapProps> = ({ className, style }) => {
   const [viewMode, setViewMode] = useState<'scatter' | 'bar'>('scatter');
   const [filterMode, setFilterMode] = useState<'units' | 'revenue' | 'all'>('all');
+  const [data, setData] = useState<GenreRevenueData[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const res = await fetch("https://jefraydi.webdev.iyaserver.com/acad274/Viralgo/genre_money_map.php");
+        if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+        const json = await res.json();
+        if (!json.items || !Array.isArray(json.items)) throw new Error("Unexpected API shape");
+
+        const mapped: GenreRevenueData[] = json.items.map((item: any) => {
+          const units = Number(item.units) || 0;
+          const revenue = Number(item.revenue) || 0;
+          const revenuePerUnit = Number(item.revenuePerUnit) || (units > 0 ? revenue / units : 0);
+          return {
+            genre: String(item.genre || "Unknown"),
+            units,
+            revenue,
+            revenuePerUnit,
+            color: getGenreColor(item.genre || "Unknown"),
+          };
+        });
+
+        if (!isMounted) return;
+        setData(mapped);
+      } catch (err: any) {
+        console.error("Money map fetch failed", err);
+        if (!isMounted) return;
+        setError("Live revenue data unavailable.");
+        setData([]);
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    };
+    fetchData();
+    return () => { isMounted = false; };
+  }, []);
 
   const filteredData = useMemo(() => {
-    let data = [...GENRE_REVENUE_DATA];
+    let items = [...data];
     
     if (filterMode === 'units') {
-      data.sort((a, b) => b.units - a.units);
-      data = data.slice(0, 20);
+      items.sort((a, b) => b.units - a.units);
+      items = items.slice(0, 20);
     } else if (filterMode === 'revenue') {
-      data.sort((a, b) => b.revenue - a.revenue);
-      data = data.slice(0, 20);
+      items.sort((a, b) => b.revenue - a.revenue);
+      items = items.slice(0, 20);
     }
     
     if (viewMode === 'bar') {
-      data.sort((a, b) => b.revenuePerUnit - a.revenuePerUnit);
+      items.sort((a, b) => b.revenuePerUnit - a.revenuePerUnit);
     }
     
-    return data;
-  }, [filterMode, viewMode]);
+    return items;
+  }, [data, filterMode, viewMode]);
 
-  const maxUnits = Math.max(...GENRE_REVENUE_DATA.map(d => d.units));
-  const maxRevenue = Math.max(...GENRE_REVENUE_DATA.map(d => d.revenue));
+  const unitValues = data.map(d => d.units).filter(v => v > 0);
+  const revenueValues = data.map(d => d.revenue).filter(v => v > 0);
+  const maxUnits = unitValues.length ? Math.max(...unitValues) : 1;
+  const maxRevenue = revenueValues.length ? Math.max(...revenueValues) : 1;
   
-  // To avoid log(0), we use a small lower bound. Smallest unit is ~3000. Smallest rev is ~5000.
-  // We'll set domains to start slightly below min.
-  const minUnits = 3000;
-  const minRevenue = 4000;
+  // To avoid log(0), set a small positive lower bound near the minimum observed.
+  const minUnits = unitValues.length ? Math.max(1, Math.min(...unitValues) * 0.9) : 1;
+  const minRevenue = revenueValues.length ? Math.max(1, Math.min(...revenueValues) * 0.9) : 1;
 
   // Reference lines for RPU levels in Log-Log scale
   // y = RPU * x -> log(y) = log(x) + log(RPU)
@@ -94,6 +137,8 @@ export const GenreMoneyMap: React.FC<GenreMoneyMapProps> = ({ className, style }
             Logarithmic Scale: Visualizing the wide gap between niche and blockbuster genres.
             <br/>
           </p>
+          {loading && <p className="text-xs text-slate-400">Loading revenue data...</p>}
+          {error && <p className="text-xs text-amber-600">{error}</p>}
         </div>
         
         <div className="flex gap-4 items-center">
@@ -131,6 +176,16 @@ export const GenreMoneyMap: React.FC<GenreMoneyMapProps> = ({ className, style }
         className="flex-grow bg-slate-50 rounded-xl border border-slate-200 p-4 relative min-h-0"
         style={{ flex: 1, minHeight: 0, position: 'relative' }}
       >
+        {loading && (
+          <div className="absolute inset-0 flex items-center justify-center text-slate-400 text-sm pointer-events-none">
+            Loading data...
+          </div>
+        )}
+        {!loading && filteredData.length === 0 && (
+          <div className="absolute inset-0 flex items-center justify-center text-slate-400 text-sm pointer-events-none">
+            No data available.
+          </div>
+        )}
         {/* Subtle background labels for quadrants - Positioned to avoid overlapping axis labels */}
         {viewMode === 'scatter' && (
           <>
