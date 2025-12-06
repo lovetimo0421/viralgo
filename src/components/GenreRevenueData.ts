@@ -1,4 +1,4 @@
-import { GENRE_COLORS } from './GenreData';
+import { GENRE_COLORS } from './genreColors';
 
 export interface GenreRevenueData {
   genre: string;

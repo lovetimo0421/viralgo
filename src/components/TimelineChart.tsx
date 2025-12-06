@@ -1,18 +1,28 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import { Slider } from "./ui/slider";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { cn } from "./ui/utils";
 import { motion } from "motion/react";
-import { processData, GENRE_COLORS } from "./GenreData";
+import { GENRE_COLORS } from "./genreColors";
 import { Filter, ChevronDown, Check, TrendingUp, Zap, RotateCcw } from "lucide-react";
 
 // --- Constants ---
-const GENRES = Object.keys(GENRE_COLORS).sort();
-const START_YEAR = 2010;
-const END_YEAR = 2025;
+const FALLBACK_GENRES = Object.keys(GENRE_COLORS).sort();
+const FALLBACK_START_YEAR = 2010;
+const FALLBACK_END_YEAR = 2025;
+const FALLBACK_DATA: TimelinePoint[] = [];
 
-const MOCK_DATA = processData();
+type TimelinePoint = {
+  year: number;
+  [genre: string]: number | string;
+};
+
+interface GenreTimelineResponse {
+  genres: string[];
+  years: number[];
+  chartData: TimelinePoint[];
+}
 
 // --- Components ---
 
@@ -128,27 +138,77 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 };
 
 export function TimelineChart({ className, style }: { className?: string; style?: React.CSSProperties }) {
-  const [selectedGenres, setSelectedGenres] = useState<string[]>(GENRES);
-  const [yearRange, setYearRange] = useState<number[]>([START_YEAR, END_YEAR]);
+  const [genres, setGenres] = useState<string[]>(FALLBACK_GENRES);
+  const [data, setData] = useState<TimelinePoint[]>([]);
+  const [selectedGenres, setSelectedGenres] = useState<string[]>(FALLBACK_GENRES);
+  const [yearRange, setYearRange] = useState<number[]>([FALLBACK_START_YEAR, FALLBACK_END_YEAR]);
+  const [startYear, setStartYear] = useState<number>(FALLBACK_START_YEAR);
+  const [endYear, setEndYear] = useState<number>(FALLBACK_END_YEAR);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+
+  // Fetch live data from backend
+  useEffect(() => {
+    let isMounted = true;
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const res = await fetch("https://jefraydi.webdev.iyaserver.com/acad274/Viralgo/genre_timeline.php");
+        if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+        const json: GenreTimelineResponse = await res.json();
+
+        if (!json.chartData || !json.genres || !json.years) throw new Error("Unexpected API shape");
+
+        const prepared = json.chartData.map((row) => {
+          const total = json.genres.reduce((acc, g) => acc + (Number(row[g]) || 0), 0);
+          return { ...row, total };
+        });
+
+        if (!isMounted) return;
+        setGenres(json.genres);
+        setData(prepared);
+        setSelectedGenres(json.genres);
+        const minYear = Math.min(...json.years);
+        const maxYear = Math.max(...json.years);
+        setStartYear(minYear);
+        setEndYear(maxYear);
+        setYearRange([minYear, maxYear]);
+      } catch (err: any) {
+        console.error("Timeline fetch failed, falling back to local data", err);
+        if (!isMounted) return;
+        setError("Live data unavailable, no fallback dataset configured.");
+        setData([]);
+        setGenres(FALLBACK_GENRES);
+        setSelectedGenres([]);
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    };
+    fetchData();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   // Sort genres by total volume (Biggest at Bottom) to ensure consistent and visually pleasing stacking
   const sortedGenres = useMemo(() => {
     const volumes: Record<string, number> = {};
-    GENRES.forEach(g => volumes[g] = 0);
-    MOCK_DATA.forEach(d => {
-      GENRES.forEach(g => {
+    genres.forEach(g => volumes[g] = 0);
+    data.forEach(d => {
+      genres.forEach(g => {
         if (d[g]) volumes[g] += d[g];
       });
     });
     // Descending sort: High volume -> Low volume
     // In Recharts Stack, the first rendered Area is at the BOTTOM.
     // We want Biggest at Bottom to provide a stable base.
-    return [...GENRES].sort((a, b) => volumes[b] - volumes[a]);
-  }, []);
+    return [...genres].sort((a, b) => volumes[b] - volumes[a]);
+  }, [data, genres]);
 
   const filteredData = useMemo(() => {
-    return MOCK_DATA.filter(d => d.year >= yearRange[0] && d.year <= yearRange[1]);
-  }, [yearRange]);
+    return data.filter(d => d.year >= yearRange[0] && d.year <= yearRange[1]);
+  }, [data, yearRange]);
 
   const toggleGenre = (genre: string) => {
     if (selectedGenres.includes(genre)) {
@@ -158,13 +218,13 @@ export function TimelineChart({ className, style }: { className?: string; style?
     }
   };
 
-  const applyStory = (genres: string[], start: number, end: number) => {
-    const validGenres = genres.filter(g => GENRES.includes(g));
+  const applyStory = (storyGenres: string[], start: number, end: number) => {
+    const validGenres = storyGenres.filter(g => genres.includes(g));
     setSelectedGenres(validGenres);
     setYearRange([start, end]);
   };
 
-  const selectAll = () => setSelectedGenres(GENRES);
+  const selectAll = () => setSelectedGenres(genres);
   const deselectAll = () => setSelectedGenres([]);
 
   return (
@@ -189,8 +249,10 @@ export function TimelineChart({ className, style }: { className?: string; style?
           <div>
             <h3 className="text-lg text-slate-500 mb-1" style={{ fontFamily: 'Days One', fontSize: '18px', marginBottom: '4px' }}>Market Evolution</h3>
             <p className="text-slate-400 text-sm" style={{ fontFamily: 'Pathway Extreme', fontSize: '14px' }}>
-              Analyze trends across 30 genres. Showing {selectedGenres.length} of {GENRES.length} genres.
+              Analyze trends across {genres.length} genres. Showing {selectedGenres.length} of {genres.length} genres.
             </p>
+            {loading && <p className="text-xs text-slate-400">Loading latest data...</p>}
+            {error && <p className="text-xs text-amber-600">{error}</p>}
           </div>
           
           <div className="flex items-center gap-3" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -209,7 +271,7 @@ export function TimelineChart({ className, style }: { className?: string; style?
                <StoryButton 
                  title="Reset View" 
                  icon={RotateCcw} 
-                 onClick={() => { setSelectedGenres(GENRES); setYearRange([START_YEAR, END_YEAR]); }} 
+                 onClick={() => { setSelectedGenres(genres); setYearRange([startYear, endYear]); }} 
                />
             </div>
 
@@ -233,7 +295,7 @@ export function TimelineChart({ className, style }: { className?: string; style?
                   <div className="flex items-center gap-2">
                     <Filter className="w-4 h-4 text-slate-400" />
                     <span className="font-medium text-sm text-slate-700" style={{ fontFamily: 'Days One' }}>Select Genres</span>
-                    <span className="bg-slate-200 text-slate-600 text-[10px] px-1.5 py-0.5 rounded-full font-bold">{GENRES.length}</span>
+                    <span className="bg-slate-200 text-slate-600 text-[10px] px-1.5 py-0.5 rounded-full font-bold">{genres.length}</span>
                   </div>
                   <div className="flex gap-1 bg-white p-1 rounded-lg border border-slate-200">
                     <button 
@@ -253,7 +315,7 @@ export function TimelineChart({ className, style }: { className?: string; style?
                 </div>
                 <div className="max-h-[480px] overflow-y-auto p-6 bg-white">
                   <div className="grid grid-cols-3 gap-3">
-                    {GENRES.map(genre => (
+                    {genres.map(genre => (
                       <GenreChip
                         key={genre}
                         genre={genre}
@@ -294,10 +356,10 @@ export function TimelineChart({ className, style }: { className?: string; style?
             margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
           >
             <defs>
-              {GENRES.map(genre => (
+              {genres.map(genre => (
                 <linearGradient key={genre} id={`color${genre.replace(/[^a-zA-Z0-9]/g, '')}`} x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor={GENRE_COLORS[genre]} stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor={GENRE_COLORS[genre]} stopOpacity={0.1}/>
+                  <stop offset="5%" stopColor={GENRE_COLORS[genre] || "#8884d8"} stopOpacity={0.8}/>
+                  <stop offset="95%" stopColor={GENRE_COLORS[genre] || "#8884d8"} stopOpacity={0.1}/>
                 </linearGradient>
               ))}
             </defs>
@@ -323,7 +385,7 @@ export function TimelineChart({ className, style }: { className?: string; style?
                   key={genre}
                   type="monotone"
                   dataKey={genre}
-                  stroke={GENRE_COLORS[genre]}
+                  stroke={GENRE_COLORS[genre] || "#8884d8"}
                   fill={`url(#color${genre.replace(/[^a-zA-Z0-9]/g, '')})`}
                   animationDuration={800}
                   fillOpacity={1}
@@ -354,10 +416,10 @@ export function TimelineChart({ className, style }: { className?: string; style?
           <span>{yearRange[1]}</span>
         </div>
         <Slider
-          defaultValue={[START_YEAR, END_YEAR]}
+          defaultValue={[startYear, endYear]}
           value={yearRange}
-          min={START_YEAR}
-          max={END_YEAR}
+          min={startYear}
+          max={endYear}
           step={1}
           onValueChange={(val) => setYearRange(val)}
           className="w-full"
