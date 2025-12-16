@@ -37,7 +37,6 @@ const CustomTooltip = ({ active, payload }: any) => {
   return null;
 };
 
-// Log scale formatter
 const formatLogTick = (val: number) => {
   if (val === 0) return '0';
   if (val >= 1000000) return `${val / 1000000}M`;
@@ -118,11 +117,6 @@ export const GenreMoneyMap: React.FC<GenreMoneyMapProps> = ({ className, style }
   const minUnits = unitValues.length ? Math.max(1, Math.min(...unitValues) * 0.9) : 1;
   const minRevenue = revenueValues.length ? Math.max(1, Math.min(...revenueValues) * 0.9) : 1;
 
-  // Reference lines for RPU levels in Log-Log scale
-  // y = RPU * x -> log(y) = log(x) + log(RPU)
-  // In Recharts scatter, if we use scale="log", we still provide data points in linear values.
-  // Recharts handles the log transform.
-  // Points: (minUnits, minUnits*RPU) to (maxUnits, maxUnits*RPU)
   const rpuLines = [10, 20, 50, 100];
 
   return (

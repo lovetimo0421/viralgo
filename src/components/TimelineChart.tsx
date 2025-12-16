@@ -7,7 +7,6 @@ import { motion } from "motion/react";
 import { GENRE_COLORS } from "./genreColors";
 import { Filter, ChevronDown, Check, TrendingUp, Zap, RotateCcw } from "lucide-react";
 
-// --- Constants ---
 const FALLBACK_GENRES = Object.keys(GENRE_COLORS).sort();
 const FALLBACK_START_YEAR = 2010;
 const FALLBACK_END_YEAR = 2025;
@@ -23,8 +22,6 @@ interface GenreTimelineResponse {
   years: number[];
   chartData: TimelinePoint[];
 }
-
-// --- Components ---
 
 const GenreChip = ({ genre, isSelected, onClick }: { genre: string; isSelected: boolean; onClick: () => void }) => {
   return (
@@ -191,7 +188,6 @@ export function TimelineChart({ className, style }: { className?: string; style?
     };
   }, []);
 
-  // Sort genres by total volume (Biggest at Bottom) to ensure consistent and visually pleasing stacking
   const sortedGenres = useMemo(() => {
     const volumes: Record<string, number> = {};
     genres.forEach(g => volumes[g] = 0);
@@ -200,9 +196,6 @@ export function TimelineChart({ className, style }: { className?: string; style?
         if (d[g]) volumes[g] += d[g];
       });
     });
-    // Descending sort: High volume -> Low volume
-    // In Recharts Stack, the first rendered Area is at the BOTTOM.
-    // We want Biggest at Bottom to provide a stable base.
     return [...genres].sort((a, b) => volumes[b] - volumes[a]);
   }, [data, genres]);
 

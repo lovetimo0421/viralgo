@@ -1,6 +1,16 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import insightLevel0Img from '../../assets/insight0.png';
+import insightLevel0_5Img from '../../assets/insight0.5.png';
+import insightLevel1Img from '../../assets/insight1.png';
+import insightLevel2Img from '../../assets/insight2.png';
+import insightLevel3Img from '../../assets/insight3.png';
+import insightLevel4Img from '../../assets/insight4.png';
+import insightLevel5Img from '../../assets/insight5.png';
+import insightLevel6Img from '../../assets/insight6.png';
+import insightLevel7Img from '../../assets/insight7.png';
+import insightLevel8Img from '../../assets/insight8.png';
 
 // Level data structure based on the Final Project Build PDF
 interface LevelData {
@@ -77,8 +87,8 @@ const levels: LevelData[] = [
     content: {
       sections: [
         {
-          heading: "More attention = longer lasting success",
-          text: "Analysis of specific game titles reveals that sustained social media attention correlates with longer-term player engagement. Games that maintain consistent presence across YouTube, Twitch, and other platforms demonstrate more stable player bases over time."
+          heading: "Multiplayer = More Attention",
+          text: "Analysis of specific top 10 game titles over the last decade reveals that the top games beside a few outliers are nearly always multiplayer games. This shows that multiplayer games attract people more as the players are not only interacting with the game itself but also other players."
         }
       ],
       keyConclusions: []
@@ -406,6 +416,90 @@ export default function InsightsPage() {
                   }}>
                     {section.heading}
                   </h3>
+                  {section.heading === "Average Revenue vs. Average Units Sold Analysis" && (
+                    <motion.figure
+                      style={{
+                        marginTop: '10px',
+                        marginBottom: '20px',
+                        borderRadius: '12px',
+                        overflow: 'hidden',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        background: 'rgba(255,255,255,0.02)'
+                      }}
+                      initial={{ opacity: 0, scale: 0.98 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      <img
+                        src={insightLevel3Img}
+                        alt="Average revenue vs average units sold chart"
+                        style={{ width: '100%', display: 'block', objectFit: 'cover' }}
+                      />
+                    </motion.figure>
+                  )}
+                  {section.heading === "Genre Money Map" && (
+                    <motion.figure
+                      style={{
+                        marginTop: '10px',
+                        marginBottom: '20px',
+                        borderRadius: '12px',
+                        overflow: 'hidden',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        background: 'rgba(255,255,255,0.02)'
+                      }}
+                      initial={{ opacity: 0, scale: 0.98 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      <img
+                        src={insightLevel4Img}
+                        alt="Genre money map visualization"
+                        style={{ width: '100%', display: 'block', objectFit: 'cover' }}
+                      />
+                    </motion.figure>
+                  )}
+                  {section.heading === "Platform Play Cloud & Session Duration" && (
+                    <motion.figure
+                      style={{
+                        marginTop: '10px',
+                        marginBottom: '20px',
+                        borderRadius: '12px',
+                        overflow: 'hidden',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        background: 'rgba(255,255,255,0.02)'
+                      }}
+                      initial={{ opacity: 0, scale: 0.98 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      <img
+                        src={insightLevel7Img}
+                        alt="Platform play cloud and session duration visualization"
+                        style={{ width: '100%', display: 'block', objectFit: 'cover' }}
+                      />
+                    </motion.figure>
+                  )}
+                  {section.heading === "Viral peaks are usually before player peaks" && (
+                    <motion.figure
+                      style={{
+                        marginTop: '10px',
+                        marginBottom: '20px',
+                        borderRadius: '12px',
+                        overflow: 'hidden',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        background: 'rgba(255,255,255,0.02)'
+                      }}
+                      initial={{ opacity: 0, scale: 0.98 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      <img
+                        src={insightLevel8Img}
+                        alt="Viral peaks vs player peaks visualization"
+                        style={{ width: '100%', display: 'block', objectFit: 'cover' }}
+                      />
+                    </motion.figure>
+                  )}
                   <p style={{
                     fontSize: '18px',
                     lineHeight: '1.8',
@@ -415,6 +509,126 @@ export default function InsightsPage() {
                   }}>
                     {section.text}
                   </p>
+                  {section.heading === "Overall Trends" && (
+                    <motion.figure
+                      style={{
+                        marginTop: '20px',
+                        borderRadius: '12px',
+                        overflow: 'hidden',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        background: 'rgba(255,255,255,0.02)'
+                      }}
+                      initial={{ opacity: 0, scale: 0.98 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      <img
+                        src={insightLevel0Img}
+                        alt="Genre trend lines over time"
+                        style={{ width: '100%', display: 'block', objectFit: 'cover' }}
+                      />
+                    </motion.figure>
+                  )}
+                  {section.heading === "Overall Trends" && (
+                    <motion.figure
+                      style={{
+                        marginTop: '20px',
+                        borderRadius: '12px',
+                        overflow: 'hidden',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        background: 'rgba(255,255,255,0.02)'
+                      }}
+                      initial={{ opacity: 0, scale: 0.98 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      <img
+                        src={insightLevel0_5Img}
+                        alt="Additional genre trend visualization"
+                        style={{ width: '100%', display: 'block', objectFit: 'cover' }}
+                      />
+                    </motion.figure>
+                  )}
+                  {section.heading === "The Battle Royale Bubble" && (
+                    <motion.figure
+                      style={{
+                        marginTop: '20px',
+                        borderRadius: '12px',
+                        overflow: 'hidden',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        background: 'rgba(255,255,255,0.02)'
+                      }}
+                      initial={{ opacity: 0, scale: 0.98 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      <img
+                        src={insightLevel1Img}
+                        alt="Battle Royale genre popularity over time"
+                        style={{ width: '100%', display: 'block', objectFit: 'cover' }}
+                      />
+                    </motion.figure>
+                  )}
+                  {section.heading === "Analysis of MOBA Trend" && (
+                    <motion.figure
+                      style={{
+                        marginTop: '20px',
+                        borderRadius: '12px',
+                        overflow: 'hidden',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        background: 'rgba(255,255,255,0.02)'
+                      }}
+                      initial={{ opacity: 0, scale: 0.98 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      <img
+                        src={insightLevel2Img}
+                        alt="MOBA genre trend"
+                        style={{ width: '100%', display: 'block', objectFit: 'cover' }}
+                      />
+                    </motion.figure>
+                  )}
+                  {section.heading === "Multiplayer = More Attention" && (
+                    <motion.figure
+                      style={{
+                        marginTop: '20px',
+                        borderRadius: '12px',
+                        overflow: 'hidden',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        background: 'rgba(255,255,255,0.02)'
+                      }}
+                      initial={{ opacity: 0, scale: 0.98 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      <img
+                        src={insightLevel5Img}
+                        alt="Social attention vs player engagement chart"
+                        style={{ width: '100%', display: 'block', objectFit: 'cover' }}
+                      />
+                    </motion.figure>
+                  )}
+                  {section.heading === "Multiplayer = More Attention" && (
+                    <motion.figure
+                      style={{
+                        marginTop: '20px',
+                        borderRadius: '12px',
+                        overflow: 'hidden',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        background: 'rgba(255,255,255,0.02)'
+                      }}
+                      initial={{ opacity: 0, scale: 0.98 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      <img
+                        src={insightLevel6Img}
+                        alt="Additional multiplayer attention visualization"
+                        style={{ width: '100%', display: 'block', objectFit: 'cover' }}
+                      />
+                    </motion.figure>
+                  )}
                   {section.sources && section.sources.length > 0 && (
                     <div style={{ marginTop: '20px' }}>
                       <p style={{
