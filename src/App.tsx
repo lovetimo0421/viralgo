@@ -13,6 +13,7 @@ import imgUntitledArtwork1481 from "figma:asset/69cade9dd2386582c8defc686ecba3c3
 import imgUntitledArtwork1491 from "figma:asset/e17c5441e9092fccef55ff3a5ff298311912f666.png";
 import imgUntitledArtwork1401 from "figma:asset/1c9d0cfc21a9857de2a906a5385c7ac4bb59d297.png";
 import GamesDashboard from './components/games/GamesDashboard';
+import InsightsPage from './components/insights/InsightsPage';
 
 function Group1({ className }: { className?: string }) {
   return (
@@ -127,7 +128,7 @@ function NavBar() {
     <div className="absolute contents left-0 top-0" data-name="NavBar">
       <div className="absolute bg-white h-[60px] left-0 top-0 w-[1440px]" />
       <Group />
-      <Link to="/games">
+      <Link to="/insights">
         <motion.p
           className="[text-underline-position:from-font] absolute decoration-solid font-normal h-[40px] leading-[normal] left-[1152px] text-[#101545] text-[14px] top-[22px] underline w-[105px] cursor-pointer"
           style={{ fontVariationSettings: "'wdth' 100", fontFamily: 'Pathway Extreme' }}
@@ -561,6 +562,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/games" element={<GamesDashboard />} />
+        <Route path="/insights" element={<InsightsPage />} />
       </Routes>
     </Router>
   );
