@@ -1,0 +1,942 @@
+﻿1,Action;Strategy;MOBA,Dota 2,1263992,1295114
+2,Shooter;Action;Multiplayer,Counter-Strike 2,823694,1862531
+3,RPG;Open World;Post-apocalyptic,Fallout 4,471955,472962
+4,Action;Adventure;Open World,Grand Theft Auto V Legacy,364544,364548
+5,Action;Adventure;Indie,Terraria,159171,489886
+6,Action;Hero Shooter;Multiplayer,Team Fortress 2,94941,253997
+7,RPG;Open World;Story Rich,The Witcher 3: Wild Hunt,92268,103329
+8,Action;Adventure;Stealth,METAL GEAR SOLID V: THE PHANTOM PAIN,91074,91195
+9,RPG;Open World;Adventure,The Elder Scrolls V: Skyrim,90869,287411
+10,Action;Adventure;Indie,ARK: Survival Evolved,84801,248405
+11,Simulation;Sports;Management,Football Manager 2015,82071,82071
+12,Action;RPG;Co-op,PAYDAY 2,81105,247709
+13,Casual;Indie;Simulation,Garry's Mod,73750,73863
+14,Simulation;Sports;Management,Football Manager 2016,73185,82916
+15,Action;Action Roguelike;Rogue-like,The Binding of Isaac: Rebirth,69903,70701
+16,Strategy;Turn-Based Strategy;Turn-Based,Sid Meier's Civilization V,69206,91363
+17,Adventure;Casual;Indie,Clicker Heroes,65880,65882
+18,Action;Adventure;Multiplayer,Call of Duty: Black Ops III,62407,63681
+19,Action;Adventure;Casual,Trove,58713,58949
+20,Action;RPG;Action RPG,Warframe,58502,189837
+21,Simulation;Strategy;City Builder,Cities: Skylines,57421,60386
+22,Action;Simulation;Strategy,Arma 3,47869,56679
+23,Action;RPG;Zombies,Dying Light,45876,45876
+24,Action;Indie;Racing,Rocket League,44916,147632
+25,RPG;Isometric;Fantasy,Pillars of Eternity,41906,41906
+26,Action;Adventure;Indie,Just Survive,40335,40335
+27,Action;Adventure;Open World,Saints Row IV,40200,42270
+28,Action;Adventure;Casual,Starbound,40198,88709
+29,Strategy;Historical;Turn-Based Strategy,Total War: ROME II - Emperor Edition,38710,118240
+30,Action;Adventure;Indie,Rust,38232,262284
+31,Strategy;Turn-Based Strategy;Sci-fi,Sid Meier's Civilization: Beyond Earth,37473,86892
+32,Shooter;Action;Multiplayer,Counter-Strike,37107,319586
+33,Action;Adventure;Casual,Unturned,36180,112703
+34,Action;Massively Multiplayer;Simulation,War Thunder,35313,121318
+35,Action;Adventure;Open World,Mad Max,33356,33356
+36,Action;Adventure;Indie,Path of Exile,32297,229337
+37,Action;Adventure;Multiplayer,Call of Duty: Black Ops III Beta,32020,32020
+38,Indie;Simulation;Driving,Euro Truck Simulator 2,30421,69754
+39,Action;RPG;Open World,Fallout: New Vegas,30309,51038
+40,Action;Adventure;Massively Multiplayer,DayZ,29472,78937
+41,Action;RPG;Medieval,Mount & Blade: Warband,28095,33054
+43,Action;Multiplayer;Co-op,Evolve Stage 2,27403,51127
+44,Strategy;Historical;War,Total War: ATTILA,26237,26346
+45,Action;Adventure;Indie,TERA,25259,25260
+46,Shooter;Action;Multiplayer,Counter-Strike: Source,24617,100056
+47,Action;Indie;Online Co-Op,Warhammer: End Times - Vermintide,24594,24700
+48,Simulation;Strategy;Grand Strategy,Europa Universalis IV,24394,48165
+49,Action;Zombies;Multiplayer,Killing Floor 2,24113,69987
+50,Action;Adventure;Open World,Just Cause 3,23376,23459
+51,Action;Zombies;Co-op,Left 4 Dead 2,23199,162399
+52,Casual;Indie;Clicker,AdVenture Capitalist,22997,22998
+53,Action;Indie;Massively Multiplayer,Robocraft,22814,26725
+54,Action;Anime;Fighting,DRAGON BALL XENOVERSE,22782,22850
+55,Action;Indie;Simulation,Space Engineers,22500,23888
+57,Action;RPG;Loot,Borderlands 2,21917,124678
+58,Action;Adventure;Casual,SMITE,19957,31169
+59,Strategy;Turn-Based Strategy;Tactical,XCOM: Enemy Unknown,19786,70568
+60,Action;Adventure;Indie,Don't Starve Together,19612,115925
+61,Indie;Simulation;Space,Kerbal Space Program,19148,19149
+62,Strategy;RTS;Medieval,Age of Empires II (2013),19038,27927
+63,Action;Indie;Great Soundtrack,Hotline Miami 2: Wrong Number,18882,18950
+64,Action;Simulation;Strategy,Arma 2: Operation Arrowhead,18818,19175
+65,Simulation;Sports;Management,Football Manager 2014,18782,79105
+66,Action;Indie;RPG,Dungeon Defenders II,18744,18785
+68,Action;Adventure;Massively Multiplayer,Elite Dangerous,18073,28923
+70,Strategy;RTS;Base-Building,Homeworld Remastered Collection,17778,17790
+71,Action;Casual;Indie,SpeedRunners,17072,17212
+72,Strategy;World War II;RTS,Company of Heroes 2,16638,164688
+73,Action;Adventure;Indie,7 Days to Die,16351,125419
+74,Action;Zombies;Open World,Dead Island,16346,35906
+75,Action;Open World;Comedy,Saints Row: The Third,16251,34371
+76,Indie;Simulation;Strategy,Prison Architect,16185,16211
+77,Action;Indie;Strategy,Insurgency,15775,121575
+78,Shooter;Action;Multiplayer,Call of Duty: Advanced Warfare - Multiplayer,15445,35017
+79,Strategy;Card Game;Trading Card Game,Magic Duels,14544,14586
+80,Action;Adventure;Casual,Castle Crashers,14201,16013
+81,Action;Fighting;Gore,Mortal Kombat X,13649,15743
+82,Action;Indie;Medieval,Chivalry: Medieval Warfare,13532,25145
+83,Action;Indie;Massively Multiplayer,Heroes & Generals,13443,21026
+84,Action;Adventure;Simulation,Hurtworld,13291,13333
+85,RPG;Fantasy;Mature,Reign Of Kings,13278,13278
+88,Shooter;Action;Hero Shooter,Dirty Bomb,13112,13113
+89,RPG;Fantasy;Mature,The Witcher 2: Assassins of Kings Enhanced Edition,12883,12884
+90,RPG;Simulation;Strategy,Tropico 5,12689,13483
+91,RPG;Simulation;Strategy,Crusader Kings II,12105,141439
+92,Shooter;Action;Zombies,Killing Floor,12086,24107
+94,Massively Multiplayer;RPG;MMORPG,FINAL FANTASY XIV Online,11945,95150
+97,Action;Zombies;Co-op,Dead Island Riptide,11199,17960
+98,Shooter;Action;Indie,Depth,10915,10916
+99,Indie;RPG;Great Soundtrack,Undertale,10473,11071
+100,Shooter;Action;Multiplayer,Call of Duty: Black Ops II - Multiplayer,10466,71228
+101,Adventure;Indie;Simulation,Don't Starve,10431,16796
+103,RPG;Open World;Post-apocalyptic,Fallout 3 - Game of the Year Edition,10400,11471
+105,Action;Casual;Massively Multiplayer,FreeStyle 2: Street Basketball,10305,10356
+106,Action;RPG;Looter Shooter,Borderlands: The Pre-Sequel,10302,68238
+107,Action;Adventure;Open World,Far Cry 4,9738,16963
+108,Action;Simulation;Strategy,Men of War: Assault Squad 2,9720,9750
+109,Action;Casual;Indie,Counter-Strike Nexon,9651,10007
+110,Action;Adventure;Female Protagonist,Tomb Raider,9645,89538
+111,Strategy;Historical;Turn-Based Strategy,Total War: SHOGUN 2,9545,54115
+113,Action;Adventure;RPG,How to Survive,9230,9231
+114,Casual;Indie;Nudity,Sakura Clicker,9107,9127
+115,Action;Adventure;Platformer,Portal 2,9099,98460
+116,Strategy;Historical;Military,Total War: EMPIRE - Definitive Edition,8920,27559
+117,Action;Adventure;LEGO,Marvel Heroes Omega,8758,12518
+118,Simulation;Strategy;Singleplayer,Spacewar,8710,138416
+119,Adventure;RPG;Strategy,Divinity: Original Sin (Classic),8686,22040
+120,Action;Massively Multiplayer;Strategy,Block N Load,8559,8640
+121,Action;RPG;Anime,Tales of Zestiria,8555,9696
+122,Action;RPG;Fantasy,The Witcher: Enhanced Edition,8337,12685
+123,Adventure;Comedy;Story Rich,Tales from the Borderlands,8234,8690
+127,Simulation;Farming Sim;Multiplayer,Farming Simulator 15,7587,18711
+128,Shooter;Action;Massively Multiplayer,PlanetSide 2,7519,29676
+129,Action;Indie;Multiplayer,Brawlhalla,7518,34816
+130,Simulation;Strategy;City Builder,Anno 2205,7445,7446
+133,Indie;Simulation;Strategy,Banished,7340,24636
+134,Action;Adventure;Massively Multiplayer,The Elder Scrolls Online,7262,49234
+135,Adventure;Indie;RPG,Shadowrun: Hong Kong - Extended Edition,7218,7260
+137,Action;Adventure;Indie,Torchlight II,7100,54821
+138,Action;Casual;Indie,Time Clickers,6993,7003
+139,Indie;Racing;Simulation,Assetto Corsa,6954,19796
+141,Adventure;Indie;RPG,Wasteland 2,6913,18856
+144,Massively Multiplayer;Simulation;Sports,Fishing Planet,6709,9926
+145,Action;Adventure;Sniper,Sniper Elite 3,6704,10861
+146,Indie;Simulation;Sandbox,Besiege,6638,11206
+147,Shooter;Action;Multiplayer,BLOCKADE 3D,6596,6968
+148,Adventure;Indie;RPG,Divinity: Original Sin Enhanced Edition,6555,7565
+149,Sports;Strategy;Multiplayer,Blood Bowl 2,6510,6511
+150,Action;Adventure;Magic,Magicka 2,6426,6426
+152,Action;Indie;Racing,Race The Sun,6371,6455
+153,Action;Adventure;Indie,GRAV,6335,6367
+154,Action;Adventure;Massively Multiplayer,Neverwinter,6325,14866
+156,Strategy;Aliens;Sci-fi,Galactic Civilizations III,6296,6297
+158,Action;Adventure;Stealth,Dishonored,6261,19938
+159,Action;Adventure;Casual,BattleBlock Theater,6178,14781
+160,Action;Adventure;Indie,Grim Dawn,6129,61458
+161,Adventure;Indie;Open World Survival Craft,Stranded Deep,6036,6036
+162,Adventure;Indie;Simulation,This War of Mine,6028,9503
+163,Indie;Simulation;Strategy,Planetbase,5979,6670
+164,Shooter;Action;Massively Multiplayer,Warface: Clutch,5933,13867
+167,Action;Open World;Comedy,Saints Row: Gat out of Hell,5811,5827
+168,RPG;Strategy;Card Game,Card Hunter,5799,5800
+170,Action;Adventure;Indie,Rebel Galaxy,5716,5717
+171,Indie;Massively Multiplayer;Multiplayer,Transformice,5636,5636
+173,Strategy;Medieval;Historical,Total War: MEDIEVAL II - Definitive Edition,5624,8453
+174,Shooter;Action;Multiplayer,Call of Duty: Modern Warfare 2 (2009) - Multiplayer,5617,112874
+176,Action;Open World;Destruction,Red Faction: Guerrilla Steam Edition,5570,5613
+177,Action;Adventure;Indie,Amnesia: The Dark Descent,5566,5666
+178,Action;Fighting;Arcade,Ultra Street Fighter IV,5546,5547
+179,Shooter;Action;Alternate History,Wolfenstein: The New Order,5429,11986
+180,Action;Strategy;World War II,Company of Heroes,5401,5906
+181,RPG;Strategy;Turn-Based Strategy,Age of Wonders III,5358,19469
+184,Casual;Simulation;Multiplayer,Mitos.is: The Game,5217,5299
+185,Action;Great Soundtrack;Atmospheric,Ori and the Blind Forest,5209,13108
+186,Action;Adventure;Massively Multiplayer,ArcheAge,5137,6509
+187,Action;Adventure;Open World,Grand Theft Auto IV: The Complete Edition,5105,11696
+188,Simulation;Sports;Management,Football Manager 2013,5048,87719
+189,Action;Adventure;Indie,The Forest,4993,109397
+190,RPG;Strategy;Turn-Based Strategy,Might & Magic Heroes VII,4992,4993
+192,Action;Massively Multiplayer;Open World,APB Reloaded,4927,11813
+194,Action;Adventure;Pirates,Assassin's Creed IV Black Flag,4884,16049
+195,Shooter;Action;Story Rich,BioShock Infinite,4801,65332
+197,Stealth;Action;Tactical,METAL GEAR SOLID V: GROUND ZEROES,4730,5810
+198,Action;Adventure;Assassin,Assassin's Creed Syndicate,4728,4729
+199,Action;Zombies;World War II,Call of Duty: World at War,4725,4825
+202,Action;Open World;Crime,Mafia II (Classic),4617,29474
+203,Action;Stealth;Assassin,Hitman: Absolution,4587,26137
+204,Action;Indie;Dinosaurs,Dino D-Day,4585,4585
+205,Casual;Indie;Simulation,Game Dev Tycoon,4549,7761
+206,Action;Hack and Slash;Character Action Game,Devil May Cry 4 Special Edition,4499,4500
+207,Strategy;City Builder;Simulation,Anno 2070,4442,11217
+208,Action;Fighting;2D Fighter,Street Fighter V Beta,4434,4434
+209,Action;Fighting;Gore,Mortal Kombat Komplete Edition,4430,5235
+210,Shooter;Action;Multiplayer,Star Wars: Battlefront 2 (Classic 2005),4422,4789
+211,Action;Adventure;Casual,Creativerse,4403,10929
+212,Action;Indie;RPG,Interstellar Marines,4398,4426
+213,Action;Adventure;Survival Horror,Resident Evil,4388,4388
+214,Action;Massively Multiplayer;RPG,Survarium,4340,4382
+215,Action;Massively Multiplayer;Racing,The Crew,4337,12236
+216,Massively Multiplayer;RPG;Sci-fi,Star Trek Online,4333,7910
+217,Violent;Action;Indie,Aftermath,4282,4302
+218,Action;Adventure;Indie,Warhammer 40000: Dawn of War II - Anniversary Edition,4274,18862
+219,Action;Adventure;Indie,The Binding of Isaac,4269,12575
+220,Action;Anime;Hack and Slash,ONE PIECE PIRATE WARRIORS 3,4242,4274
+221,Simulation;Strategy;Medieval,Grand Ages: Medieval,4224,4274
+222,Simulation;Flight;Realistic,Microsoft Flight Simulator X: Steam Edition,4173,6051
+223,RPG;Strategy;Turn-Based Strategy,Heroes of Might & Magic III - HD Edition,4138,4656
+225,Action;Massively Multiplayer;Simulation,MechWarrior Online,4111,4155
+226,Indie;Simulation;Strategy,FTL: Faster Than Light,4108,19301
+227,Action;Adventure;Indie,SOMA,4071,4072
+228,Action;Adventure;Massively Multiplayer,Elite Dangerous: Horizons,4070,4138
+230,Indie;Simulation;Strategy,Wargame: Red Dragon,4052,4779
+231,Casual;Indie;Clicker,Crusaders of the Lost Idols,4029,4068
+232,Action;Indie;Fighting,Skullgirls 2nd Encore,4015,4016
+233,RPG;Fantasy;Story Rich,Dragon Age: Origins - Ultimate Edition,4009,8364
+234,Action;Open World;Character Customization,Saints Row 2,4000,6509
+236,Action;Indie;Simulation,Medieval Engineers,3984,3984
+237,Action;Adventure;Indie,Warhammer 40000: Dawn of War II - Retribution,3972,15143
+238,Strategy;RTS;Sci-fi,Grey Goo,3965,3999
+239,Action;Indie;Difficult,Geometry Dash,3962,88346
+240,Action;Adventure;Indie,The Talos Principle,3961,4007
+242,Action;Adventure;Sports,S.K.I.L.L. - Special Force 2,3917,3918
+243,Shooter;Action;Post-apocalyptic,Metro 2033 Redux,3904,50317
+245,Action;Indie;Massively Multiplayer,Infestation: The New Beginning,3869,15373
+246,Adventure;Indie;RPG,Sunless Sea,3869,4049
+247,Action;Adventure;Story Rich,DiggerOnline,3836,3837
+248,Action;Indie;RPG,Life is Feudal: Your Own,3833,7896
+249,Action;RPG;Open World,Fallout: New Vegas PCR,3775,3897
+250,Action;Adventure;Open World,Just Cause 2,3756,7547
+251,Strategy;Historical;Grand Strategy,Total War: NAPOLEON - Definitive Edition,3753,9935
+252,Action;Adventure;Indie,Tree of Life,3707,3708
+253,Action;Adventure;Zombies,Resident Evil Revelations 2,3659,3686
+254,Action;Zombies;Co-op,Zombie Army Trilogy,3615,4320
+255,Action;Adventure;Stealth,Tom Clancy's Splinter Cell Blacklist,3608,6146
+256,Indie;RPG;Strategy,Talisman: Digital Classic Edition,3590,3590
+257,Indie;Strategy;Space,StarDrive 2,3571,3609
+258,Action;Horror;Survival Horror,Alien: Isolation,3553,10870
+259,Action;Adventure;Puzzle,Portal Stories: Mel,3544,3545
+260,Action;Indie;Massively Multiplayer,Squad,3543,38573
+261,Action;Adventure;Indie,POSTAL 2,3525,4636
+262,Simulation;Strategy;Mythology,Age of Mythology: Extended Edition,3513,11074
+263,Action;Adventure;Indie,Windward,3509,3510
+264,Action;Casual;Racing,MapleStory,3503,17528
+266,Action;Adventure;Open World,Batman: Arkham City GOTY,3489,6871
+267,Massively Multiplayer;RPG;MMORPG,FINAL FANTASY XIII,3480,8320
+268,Action;Adventure;Indie,Hero Siege,3462,10427
+269,Indie;Simulation;Strategy,Kingdom: Classic,3459,64944
+271,Indie;RPG;Strategy,Strife,3418,3435
+272,Simulation;Trains;Singleplayer,Train Simulator Classic,3395,3821
+273,Strategy;Space;Turn-Based Strategy,Sid Meier's Starships,3387,3404
+274,Action;Adventure;Casual,Spore,3348,5630
+275,Indie;Simulation;Strategy,The Escapists,3312,3354
+276,Action;Adventure;Massively Multiplayer,Vindictus,3300,4124
+277,Tower Defense;Strategy;Indie,Creeper World 3: Arc Eternal,3297,3303
+278,Action;RPG;Fantasy,Wasteland 2: Director's Cut,3284,3285
+279,Action;Adventure;Indie,Warhammer 40000: Dawn of War - Soulstorm,3283,3283
+281,Indie;RPG;Strategy,Craft The World,3266,3283
+284,Action;Adventure;Indie,Guns of Icarus Online,3208,107883
+285,Simulation;Sports;Management,Football Manager 2012,3202,77630
+286,Action;Adventure;Indie,Warhammer 40000: Dawn of War - Anniversary Edition,3195,3241
+287,Indie;Simulation;Horror,Five Nights at Freddy's 3,3184,3212
+288,Shooter;Adventure;Sci-fi,Half-Life 2: Update,3151,3175
+289,Strategy;RTS;Base Building,Act of Aggression,3124,3131
+293,Shooter;Action;World War II,Wolfenstein: The Old Blood,3063,3064
+294,Adventure;Zombies;Story Rich,The Walking Dead,3062,12114
+295,Shooter;Action;Multiplayer,WARMODE,3047,3066
+296,Action;Indie;Strategy,Sanctum 2,3031,13621
+298,Indie;RPG;Simulation,HuniePop,3018,5416
+299,RPG;Strategy;Turn-Based Strategy,Might & Magic: Heroes VI,3003,9047
+300,Action;Adventure;Massively Multiplayer,RIFT,2999,15546
+301,Strategy;RTS;Historical,Rome: Total War,2958,4413
+302,Action;Indie;RPG,Dungeon Defenders,2956,21862
+303,Action;Adventure;Open World,Watch_Dogs,2943,47887
+307,Point &amp; Click;Adventure;Story Rich,Broken Age,2906,3260
+308,Casual;Indie;Simulation,Goat Simulator,2895,10108
+310,Casual;Indie;Simulation,Plague Inc: Evolved,2832,17889
+311,Action;RPG;Cyberpunk,Deus Ex: Human Revolution - Director's Cut,2805,3392
+312,Adventure;Casual;Indie,Emily is Away,2800,2803
+313,Action;Fighting;Superhero,Injustice: Gods Among Us Ultimate Edition,2797,10344
+314,Massively Multiplayer;Strategy;Medieval,Stronghold Kingdoms,2788,8616
+315,Action;Adventure;Casual,Broforce,2747,4285
+316,Action;Indie;Multiplayer,Gear Up,2743,2743
+317,Action;PvP;Sexual Content,Dead or Alive 5 Last Round,2738,2827
+318,Action;Adventure,Echo of Soul,2729,2730
+319,Shooter;Action;Indie,Risk of Rain (2013),2717,5462
+320,Action;Massively Multiplayer;RPG,EVE Online,2714,10627
+321,Action;RPG;Fantasy,Shadowrun: Dragonfall - Director's Cut,2702,2703
+322,Action;Adventure;Indie,Endless Sky,2696,3035
+323,Racing;Simulation;Sports,DiRT Rally,2692,20343
+324,Shooter;Action;Multiplayer,Call of Duty: Advanced Warfare,2664,12675
+325,RPG;JRPG;Classic,FINAL FANTASY VII,2658,6424
+326,RPG;Open World;Post-apocalyptic,Fallout 3,2652,2653
+328,Indie;RPG;Strategy,Fallen Enchantress: Legendary Heroes,2627,2682
+329,Racing;Sports;Automobile Sim,F1 2015,2621,88029
+330,Casual;Indie;Simulation,Train Fever,2609,3406
+331,Action;Adventure;Open World,Just Cause 2: Multiplayer Mod,2582,10574
+332,Adventure;Indie;Simulation,The Long Dark,2576,14707
+333,Indie;Simulation;Strategy,Big Pharma,2569,2614
+334,Action;Adventure;Co-op,Resident Evil 5,2568,2585
+335,Software,EVGA Precision X1,2533,4248
+336,Action;Adventure;Stealth,Batman: Arkham Asylum GOTY Edition,2532,6739
+337,Adventure;Indie;Simulation,Empyrion - Galactic Survival,2507,8829
+338,Shooter;Action;RPG,BioShock,2497,2674
+339,Action;RPG;Loot,Borderlands 2 RU,2496,8332
+340,Action;Simulation;Space,X Rebirth,2485,14732
+341,Action;Adventure;Open World,Assassin's Creed Unity,2481,12180
+342,Action,Call of Duty: Black Ops II - Zombies,2480,9695
+344,Action;Indie;Zombies,No More Room in Hell,2436,10922
+345,Simulation;Sports;Cycling,Pro Cycling Manager 2015,2425,2451
+346,Adventure;Indie;Comedy,The Stanley Parable,2424,4818
+347,Shooter;Action;Sci-fi,Half-Life 2,2415,64085
+348,Action;Indie;Strategy,Awesomenauts,2415,12156
+349,Action;Adventure;Open World,Mordheim: City of the Damned,2405,2715
+350,Casual;Simulation,The Ship,2399,3811
+351,Naval Combat;Naval;World War II,Steel Ocean,2387,2444
+352,Action;Adventure;Indie,Invisible Inc.,2381,2401
+353,Shooter;Action;Co-op,PAYDAY: The Heist,2366,50316
+355,Action;Adventure;Pirates,Assassin's Creed Rogue,2361,2371
+356,Adventure;Indie;Open World Survival Craft,Subnautica,2326,51156
+358,Action;Adventure;Indie,Anoxemia,2298,2299
+359,RPG;Simulation;Strategy,Dungeons 2,2294,11705
+360,RPG;Villain Protagonist;Hack and Slash,Overlord,2291,2303
+361,Action;Indie;Great Soundtrack,Hotline Miami,2284,6878
+362,Action;Indie;RPG,Crypt of the NecroDancer,2281,2282
+363,Casual;Indie;RPG,Runestone Keeper,2280,2280
+364,Action;Adventure;Anime,NARUTO SHIPPUDEN: Ultimate Ninja STORM Revolution,2279,6831
+365,Action;Hack and Slash;Quick-Time Events,Ryse: Son of Rome,2275,3257
+366,Action;Adventure;Stealth,Thief,2273,18352
+367,Action;RPG;Comedy,Magicka,2268,11727
+368,Action;Indie;Simulation,Sins of a Solar Empire: Rebellion,2263,93109
+369,Action;Adventure;Indie,Warhammer 40000: Dawn of War - Dark Crusade,2258,2259
+370,Action;Open World;Crime,Grand Theft Auto: San Andreas,2256,3387
+372,Action;Indie;Massively Multiplayer,Verdun,2239,4541
+373,Indie;Simulation;Strategy,War for the Overworld,2227,2227
+375,Action;Indie;Sports,Nidhogg,2214,2215
+376,Shooter;Action;Post-apocalyptic,Metro: Last Light Redux,2214,2819
+378,Action;Adventure;Indie,Realm of the Mad God Exalt,2176,10051
+379,Action;Indie;RPG,Hand of Fate,2169,2178
+380,Action;Adventure;Zombies,Resident Evil 6,2166,11879
+381,Action;Casual;Indie,Tap Tap Infinity,2165,2166
+382,Action;RPG;Sci-fi,Mass Effect (2007),2153,4183
+383,Shooter;Action;Dog,Call of Duty: Ghosts - Multiplayer,2152,37268
+384,Action;Adventure;Indie,Savage Lands,2152,2157
+385,Shooter;Action;Zombies,Call of Duty: Black Ops - Multiplayer,2140,118593
+386,Shooter;Action;Multiplayer,America's Army: Proving Grounds,2129,3073
+387,Action;Strategy;Fantasy,Total War: Arena,2124,3190
+388,Action;Adventure;Indie,Rogue Legacy,2122,8079
+389,Action;Adventure;Racing,Sleeping Dogs: Definitive Edition,2122,4035
+390,Indie;Fighting;2D Fighter,Rivals of Aether,2122,2922
+391,Action;Adventure;Massively Multiplayer,DC Universe Online,2117,17701
+392,Simulation;City Builder;Building,Cities XXL,2092,2092
+393,Shooter;Action;Indie,Serious Sam 3: BFE,2083,2439
+394,Action;Adventure;Anime,NARUTO SHIPPUDEN: Ultimate Ninja STORM 3 Full Burst,2059,4713
+395,Action;Adventure;Massively Multiplayer,The Settlers Online,2042,2042
+397,Action;Adventure;Casual,The Wolf Among Us,2017,14321
+399,Action;Puzzle;Puzzle-Platformer,Portal,2005,20672
+400,Simulation;Strategy;City Builder,Tropico 4,2004,10892
+401,Action;RPG;JRPG,FINAL FANTASY TYPE-0 HD,1993,2673
+402,Indie;RPG;Simulation,Project Zomboid,1991,65505
+403,Action;Indie;Simulation,Orbital Gear,1991,2034
+404,Action;Adventure;Indie,SUPER DISTRO,1984,8184
+406,Action;Strategy,Chip,1981,2569
+407,Adventure;Indie;RPG,Shadowrun Returns,1973,24329
+408,Action;Fighting;Anime,GUILTY GEAR Xrd -SIGN-,1970,1971
+409,Indie;Simulation;Strategy,Democracy 3,1965,2674
+410,RPG;Casual;Indie,QuestRun,1962,1968
+411,Racing;Simulation;Automobile Sim,Car Mechanic Simulator 2015,1962,4340
+412,Shooter;Action;World War II,Day of Defeat: Source,1956,7507
+413,Adventure;Indie;RPG,Wurm Unlimited,1950,1958
+415,Action;Sniper;Stealth,Sniper Elite V2,1947,70456
+416,Casual;Indie;RPG,Tabletop Simulator,1947,37198
+417,RPG;Indie;Capitalism,Recettear: An Item Shop's Tale,1935,2986
+418,Shooter;Action;Bullet Time,Max Payne 3,1922,9594
+419,Action;Adventure;RPG,Darksiders II,1918,8746
+423,RPG;Open World;Gothic,Risen 3 - Titan Lords,1897,8011
+424,Action;Massively Multiplayer;RPG,Defiance,1894,12690
+425,Action;Indie;Strategy,Satellite Reign,1893,7251
+426,Action;Adventure;Indie,ORION: Prelude,1889,7944
+427,Action;Indie;RPG,Transistor,1875,6727
+428,RPG;JRPG;Female Protagonist,LIGHTNING RETURNS: FINAL FANTASY XIII,1853,2503
+429,Casual;Indie;Simulation,Pixel Puzzles: Japan,1843,3423
+430,Action;Adventure;Casual,WAKFU,1825,4078
+431,Action;Platformer;Shoot 'Em Up,Nux,1820,1846
+433,Action;Adventure;Indie,Dead Realm,1814,1844
+434,Action;Adventure;Indie,RWBY: Grimm Eclipse,1810,3298
+435,Indie;RPG;Strategy,Bionic Dues,1806,1869
+436,Action;Adventure;Hack and Slash,Darksiders,1799,3929
+438,RPG;Open World;Fantasy,The Elder Scrolls IV: Oblivion Game of the Year Edition (2009),1788,6390
+439,Adventure;Platformer;Classic,Oddworld: Abe's Oddysee,1785,45049
+440,Action;Indie;Strategy,Planetary Annihilation: TITANS,1783,4577
+441,Indie;RPG;Roguelike Deckbuilder,Guild of Dungeoneering Ultimate Edition,1781,1793
+442,RPG;Open World;Fantasy,Two Worlds II HD,1778,10863
+443,Shooter;Action;Multiplayer,Counter-Strike: Condition Zero,1767,32748
+444,RPG;Indie;Turn-Based,Battlepaths,1767,1819
+446,RPG;Sci-fi;Story Rich,Mass Effect 2 (2010),1757,13320
+448,Indie;Co-op;Local Multiplayer,Keep Talking and Nobody Explodes,1744,3386
+449,Action;Adventure;Casual,Elsword,1742,2587
+450,Shooter;Action;Western,Call of Juarez Gunslinger,1732,11902
+451,RPG;Fantasy;Great Soundtrack,Child of Light,1731,2696
+452,Platformer;Pixel Graphics;Retro,Shovel Knight: Treasure Trove,1730,2875
+455,RPG;JRPG;Classic,FINAL FANTASY VIII,1722,4470
+457,Indie;RPG;Strategy,Thea: The Awakening,1720,1742
+458,Action;Zombies;Open World,Dead Island: Epidemic,1718,6052
+460,Action;Adventure;Indie,Black Mesa,1697,7158
+461,Adventure;Indie;Political,Papers Please,1694,6129
+462,Action;Great Soundtrack;Hack and Slash,METAL GEAR RISING: REVENGEANCE,1693,12205
+463,Action;Adventure;Indie,From The Depths,1692,1779
+464,Adventure;Indie;RPG,Merchants of Kaidan,1681,1716
+465,Indie;Shoot 'Em Up;Bullet Hell,Super Killer Hornet: Resurrection,1674,1674
+466,Action;Adventure;Indie,Overcast - Walden and the Werewolf,1673,6084
+467,Action;Adventure;Simulation,theHunter Classic,1665,3984
+468,RPG;Web Publishing;RPGMaker,RPG Maker MV,1664,2486
+470,Action Roguelike;Sandbox;Side Scroller,Pixel Piracy,1655,2176
+472,Casual;Simulation;Building,Construction-Simulator 2015,1648,1824
+473,Indie;Simulation;Horror,Five Nights at Freddy's 4,1637,1675
+474,Casual;Strategy;Time Management,12 Labours of Hercules III: Girl Power,1636,1642
+475,Strategy;RTS;Sci-fi,Supreme Commander 2,1632,3730
+477,Shooter;Action;Arena Shooter,Quake Live,1629,6154
+479,Action;Strategy;Tower Defense,Bloons TD5,1620,1660
+480,Action;Adventure;Casual,RADical ROACH Remastered,1616,6170
+481,Indie;Precision Platformer;Platformer,Super Meat Boy,1611,5153
+482,Action;Adventure;Female Protagonist,Rise of Incarnates,1601,1602
+483,Shooter;Action;Zombies,Call of Duty: Black Ops,1580,63343
+485,Simulation;Strategy;City Builder,SimCity 4 Deluxe,1574,5206
+487,Action;RPG;Open World,Mount & Blade: With Fire and Sword,1557,9315
+488,Action;Action Roguelike;RPG,FORCED,1557,1577
+490,Shooter;Action;Co-op,Way of the Samurai 4,1556,1557
+491,Simulation;Strategy;World War II,Hearts of Iron III,1551,1551
+493,3D Fighter;Fighting;Physics,Toribash,1542,2724
+495,Adventure;Casual;Massively Multiplayer,Aura Kingdom,1534,2165
+497,Racing;Simulation;Driving,BeamNG.drive,1528,32320
+498,Casual;Time Management;Strategy,12 Labours of Hercules,1519,1535
+499,Action;RPG;Cyberpunk,Deus Ex: Human Revolution,1510,56010
+500,Action;Adventure;Pirates,Assassin's Creed II,1509,3617
+501,Action;Casual;RPG,Town of Salem,1505,3787
+502,Action;2D Fighter;Fast-Paced,One Finger Death Punch,1504,1921
+503,Action;Stealth;Singleplayer,Styx: Master of Shadows,1492,1639
+505,Action;RPG;Simulation,State of Decay,1484,10079
+506,Action;Adventure;Indie,TERA,1483,1484
+507,Shooter;Action;Multiplayer,Call of Duty: Modern Warfare 2 (2009),1481,22614
+508,Action;Adventure;Indie,Lucius,1471,1509
+510,Adventure;Point &amp; Click;Classic,Grim Fandango Remastered,1469,1500
+512,Racing;Sports;Driving,GRID 2,1465,27339
+514,Shooter;Mechs;Action,HAWKEN,1461,8423
+515,Adventure;RPG;Web Publishing,RPG Maker VX Ace,1452,4196
+516,Action;Adventure;Massively Multiplayer,Secret World Legends,1442,3731
+517,Action;Adventure;RPG,Lords Of The Fallen,1435,8024
+519,Action;Indie;Building,TerraTech,1430,5726
+520,Puzzle Platformer;Platformer;Adventure,Oddworld: New 'n' Tasty,1430,1457
+522,Action;Horror;Survival Horror,The Evil Within,1429,4499
+523,Strategy;Grand Strategy;Historical,Victoria II,1424,3419
+524,Casual;Simulation;Automobile Sim,OMSI 2,1424,2228
+525,Shooter;Action;Multiplayer,War Trigger 3,1420,1843
+526,Action;Adventure;Indie,Victor Vran,1418,2485
+527,Indie;Simulation;Hacking,Hacknet,1415,127640
+528,Looter Shooter;Twin Stick Shooter;Action,Relic Hunters Zero: Remix,1414,3777
+530,Adventure;Strategy;Detective,L.A. Noire,1404,5115
+533,Action;Indie;Top-Down Shooter,RUNNING WITH RIFLES,1391,14149
+534,Hidden Object;Point &amp; Click;Casual,Frankenstein: Master of Death,1388,1404
+535,Adventure;Zombies;Story Rich,The Walking Dead: Season Two,1384,18627
+537,Action;Indie;Multiplayer,Ace of Spades,1374,16309
+538,Action;RPG;Simulation,State of Decay: Year-One,1371,3339
+539,Action;Adventure;Cyberpunk,Remember Me,1367,3117
+542,RPG;Indie;Metroidvania,Unepic,1351,3095
+544,Casual;Simulation,Farming Simulator 2013,1347,4639
+545,Massively Multiplayer;Strategy;2D,VEGA Conflict,1336,3814
+547,Casual;Indie;Simulation,Loadout,1331,29424
+548,Adventure;Indie;Story Rich,Dreamfall Chapters,1327,1711
+549,Action;RPG;Co-op,The Lord of the Rings: War in the North,1325,4664
+550,Action;Adventure;Massively Multiplayer,Star Conflict,1320,4973
+552,Shooter;Zombies;Survival Horror,Codename CURE,1307,1308
+556,Strategy;Tower Defense;Action,Infested Planet,1279,1280
+558,Casual;RPG;Strategy,Marvel Puzzle Quest,1273,3002
+559,Casual;Indie;Simulation,Viridi,1269,1282
+565,Casual;2D;Cartoony,Keen Dreams,1245,1262
+566,Simulation;Strategy;RTS,Rise of Nations: Extended Edition,1244,2734
+568,Action;Adventure;Indie,Planet Explorers,1242,2125
+569,RPG;Open World;Fantasy,Fable Anniversary,1242,6186
+570,Action;Adventure;Casual,Spiral Knights,1240,13143
+571,Action;Adventure;Story Rich,Spec Ops: The Line,1236,13995
+573,Action;Indie;Simulation,Sins of a Dark Age,1230,1231
+574,Casual;Indie;Puzzle,Little Inferno,1226,2129
+576,Strategy;Turn-Based Strategy;Turn-Based,Sid Meier's Civilization IV: Beyond the Sword,1214,2791
+577,Casual;Indie;Strategy,The Jackbox Party Pack,1203,3913
+578,Shooter;Action;Adventure,Shadow Warrior,1201,25890
+579,Nudity;Violent;Action,X-Blades,1195,4840
+581,Adventure;Indie;RPG,Greyfox,1192,3385
+582,Action;Open World;Parkour,Assassin's Creed Revelations,1191,3105
+584,RPG;Open World;Post-apocalyptic,Fallout,1188,8130
+585,Action;Adventure;Action-Adventure,Mirror's Edge,1187,3805
+586,Shooter;Action;Multiplayer,Call of Duty: Black Ops II,1186,18277
+589,Shooter;Action;Post-apocalyptic,RAGE,1181,18059
+590,Action;Adventure;Indie,Warhammer 40000: Dawn of War II - Chaos Rising,1176,8132
+591,Action;Adventure;LEGO,The Banner Saga,1176,4476
+593,RPG;Fantasy;Story Rich,Dragon Age: Origins,1170,7089
+594,Action;Indie;Massively Multiplayer,Anomaly Zone,1170,1210
+595,Strategy;Multiplayer;Funny,Worms Revolution,1167,7770
+596,Action;Adventure;Hack and Slash,DmC Devil May Cry,1162,5757
+598,Action;Zombies;Co-op,Left 4 Dead,1160,30616
+599,Indie;Simulation;Building,Poly Bridge,1160,4134
+601,Simulation;Strategy;Colony Sim,The Guild II: Renaissance,1159,1249
+604,RPG;Open World;Gothic,Risen,1144,1382
+605,Open World;Action;Automobile Sim,Grand Theft Auto: Episodes from Liberty City,1143,3013
+606,Racing;Combat Racing;Sports,Need for Speed: Hot Pursuit,1143,3005
+610,Indie;RPG;Roguelike,Magicite,1132,1985
+611,Gore;Inventory Management;Survival Horror,Resident Evil 4 (2005),1129,5343
+613,Strategy;RTS;Sci-fi,Supreme Commander: Forged Alliance,1117,2113
+615,Action;Indie;RPG,Nuclear Throne,1115,1213
+616,Action;Adventure;Casual,Monaco,1111,41750
+617,Action;Indie;Multiplayer,Duck Game,1106,5047
+618,Action;Shoot 'Em Up,Platypus II,1106,1687
+622,Simulation;Space;Action,X3: Albion Prelude,1099,1917
+623,Action;Adventure;Indie,Mark of the Ninja,1088,5066
+625,RPG;Pirates;Open World,Risen 2 - Dark Waters,1085,10867
+626,Simulation;Strategy;Medieval,Stronghold Crusader 2,1080,5763
+628,Action;Simulation;Strategy,Arma 2,1077,1935
+629,Strategy;Multiplayer;Turn-Based,Worms Clan Wars,1077,2092
+630,Shooter;Action;Aliens,Aliens vs. Predator,1072,3794
+631,Shooter;Action;Classic,Half-Life,1069,33471
+633,Action;Hack and Slash;Musou,Dynasty Warriors 8 Empires,1048,1052
+634,Action;Adventure;Open World,Tom Clancy's Ghost Recon Future Soldier,1041,2667
+635,Casual;Indie;Sports,Mount Your Friends,1038,1141
+636,Shooter;Action;Alternate History,Wolfenstein: The New Order German Edition,1025,2790
+637,Tactical;Strategy;Top-Down,Door Kickers,1024,2041
+640,Action;Indie;PvP,Fistful of Frags,1017,3537
+641,Action;Adventure;RPG,R.U.S.E,1015,5018
+642,Action;Adventure;Indie,Warhammer 40000: Space Marine - Anniversary Edition,1014,15653
+643,Action;Zombies;Open World,Dead Rising 3,1014,11418
+645,Software;Movie;Difficult,Source Filmmaker,1004,3975
+646,RPG;Strategy;Turn-Based Strategy,Might & Magic Heroes Online,1003,1003
+648,Action;Indie;Platformer,Humanity Asset,1001,2158
+650,Building;Space;Sandbox,Reassembly,998,1010
+653,Action;Adventure;Indie,Outlast,992,11827
+657,RPG;Hack and Slash;Action RPG,The Incredible Adventures of Van Helsing,980,4231
+658,Adventure;Indie;RPG,Armello,979,3614
+659,Action;Indie;RPG,Bastion,978,4186
+661,Action;RPG;Co-op,PAYDAY 2 Demo,973,3197
+664,Strategy;Turn-Based Strategy;Turn-Based,Sid Meier's Civilization III: Complete,966,4600
+665,Action;Adventure;Stealth,Dishonored RHCP,966,4604
+667,Hockey;Sports;Simulation,Eastside Hockey Manager,964,964
+668,Action;Adventure;RPG,Darksiders II Deathinitive Edition,958,2927
+671,Action;Adventure;Indie,The Incredible Adventures of Van Helsing: Final Cut,955,1322
+672,Action;Adventure;Open World,Bully: Scholarship Edition,954,2010
+673,Action;Adventure;RPG,Gems of War,952,3007
+674,Puzzle Platformer;Platformer;Adventure,Trine 2,951,3755
+675,Adventure;Casual,Mabinogi,950,1331
+676,RPG;Adventure;Indie,Evoland 2,949,1043
+677,RPG;Post-apocalyptic;Isometric,Underrail,947,1981
+679,Action;Indie;Strategy,Natural Selection 2,942,9510
+681,JRPG;Story Rich;RPG,The Legend of Heroes: Trails in the Sky,934,2014
+682,Indie;Simulation;Strategy,Offworld Trading Company,930,2698
+683,Action;Hack and Slash;Musou,DYNASTY WARRIORS 8: Xtreme Legends Complete Edition,929,3878
+688,Action;Casual;Indie,World of Guns: Gun Disassembly,912,1597
+689,Action;Adventure;Open World,Assassin's Creed Brotherhood,911,3848
+690,Shooter;Multiplayer;Action,Tribes: Ascend,905,7444
+693,Action;Adventure;Indie,Grimm,902,30886
+694,RPG;Dungeons &amp; Dragons;Story Rich,Baldur's Gate II: Enhanced Edition,899,2644
+695,RPG;Open World;Fantasy,Two Worlds: Epic Edition,893,9281
+696,Action;Adventure;Parkour,Pressure,891,9263
+697,Shooter;Action;Multiplayer,Call of Duty 4: Modern Warfare (2007),890,1796
+698,Adventure;Indie;Platformer,BEEP,889,1373
+699,RPG;Strategy;Turn-Based Strategy,Heroes of Might & Magic V,884,1720
+700,Adventure;Casual;Indie,16bit Trader,884,1345
+702,Sports;Strategy;Board Game,Blood Bowl: Chaos Edition,882,1945
+705,Dungeon Crawler;RPG;Grid-Based Movement,Legend of Grimrock 2,871,4146
+706,Action;Indie;Dinosaurs,Primal Carnage: Extinction,858,874
+707,Action;Indie;Massively Multiplayer,Boring Man - Online Tactical Stickman Combat,856,1032
+708,RPG,The Elder Scrolls III: Morrowind,853,1396
+709,Indie;Strategy;Tower Defense,Kingdom Rush,849,2022
+710,Action;Indie;Strategy,Sanctum,844,7380
+711,Platformer;Roguelike;Action Roguelike,Spelunky,843,2919
+713,Indie;Simulation;Flight,SimplePlanes,839,885
+714,Indie;Racing;Singleplayer,Ampersand,839,4524
+717,Shooter;Action;Indie,TOXIKK,833,1646
+718,RPG;JRPG;Singleplayer,The Last Remnant,831,1544
+719,Shooter;Action;Singleplayer,BioShock 2,826,4635
+720,Adventure;RPG;Fantasy,Baldur's Gate: Enhanced Edition,822,3756
+725,Action;Simulation;Space,Spore: Galactic Adventures,812,1517
+726,Adventure;Indie;RPG,Tales of Maj'Eyal,812,867
+729,Adventure;Massively Multiplayer;VR,Heaven Island - VR MMO,800,7907
+730,Action;Platformer;Metroidvania,Dust: An Elysian Tail,797,2669
+733,Racing;Simulation;Sports,RaceRoom Racing Experience,788,2630
+734,Adventure;Casual;Indie,Everlasting Summer,788,1907
+735,Action;Adventure;Casual,Starbound - Unstable,785,1553
+736,Action;Adventure;Indie,Flesh Eaters,780,3127
+737,Shooter;Action;Dog,Call of Duty: Ghosts,779,13831
+738,Shooter;Action;Multiplayer,GunZ 2: The Second Duel,778,10441
+739,Action;RPG;Simulation,Starpoint Gemini 2,776,20842
+741,Adventure;RPG;JRPG,PROTOTYPE 2,766,4070
+742,Shooter;Action;PvP,Tom Clancy's Rainbow Six: Vegas 2,765,1734
+744,Stealth;Action;Assassin,Hitman: Blood Money,762,1138
+745,Indie;RPG;Strategy,Sheltered,762,1413
+750,Casual;Indie;Strategy,The Jackbox Party Pack 2,749,4937
+752,Indie;Simulation;Strategy,Xenonauts,741,1619
+753,Action;Indie;Simulation,Surgeon Simulator,739,3487
+754,Adventure;Point & Click;Comedy,Deponia: The Complete Journey,739,13321
+755,Action;RPG;Zombies,Dying Light Demo,739,4218
+757,Shooter;Action;Sniper,Sniper Ghost Warrior 2,737,3629
+758,Adventure;RPG;Sci-fi,Blood of Old (OLD VERSION),736,1923
+759,Action;Zombies;Co-op,Dead Rising 2,731,2812
+761,Action;Indie;Racing,Wreckfest,729,3865
+767,Puzzle Platformer;Platformer;Adventure,Trine,709,2659
+769,Indie;RPG;Strategy,Eador. Masters of the Broken World,702,118780
+770,Racing;Sports;Local Multiplayer,Sonic & All-Stars Racing Transformed Collection,698,5861
+771,Indie;Simulation;Gore,Viscera Cleanup Detail,698,1773
+772,Action;Mechs;Robots,Gun Metal,697,1091
+774,Action;Tactical;Sci-fi,The Bureau: XCOM Declassified,694,7412
+775,Action;RPG;Fantasy,Enclave,693,14907
+780,Strategy;Puzzle;Minimalist,Mini Metro,687,2104
+781,Action;Adventure;Indie,Octodad: Dadliest Catch,686,1815
+785,Simulation;Sports;Management,Football Manager 2011,680,34997
+788,Action;Adventure;RPG,F.E.A.R. 3,671,3090
+789,Action;Adventure;Indie,Out There Somewhere,669,2615
+790,Adventure;Indie;RPG,New kind of adventure,668,3215
+793,RPG;Open World;Fantasy,Gothic 3,663,915
+794,Strategy;Turn-Based Strategy;Turn-Based,Sid Meier's Civilization IV,661,2314
+795,Action;Adventure;Indie,The Culling Of The Cows,658,4094
+796,RPG;Post-apocalyptic;Classic,Fallout 2,656,2302
+799,Action;Adventure;Pirates,Assassin's Creed,651,1468
+801,Action;Adventure;Zombies,Resident Evil Revelations,647,2095
+802,Racing;Simulation;Automobile Sim,Car Mechanic Simulator 2014,644,1078
+804,Indie;Simulation;Strategy,Stonehearth,642,1851
+805,Strategy;Multiplayer;Classic,Worms Armageddon,641,834
+806,Casual;Indie;Word Game,Ace of Words,641,2234
+807,Action;Adventure;RPG,F.E.A.R. Online,639,2362
+810,Action;Adventure;Horror,Alan Wake,634,6652
+811,Shooter;Action;Multiplayer,Blockstorm,634,1411
+812,Action;Multiplayer;Battle Royale,Vampire: The Masquerade - Bloodlines,632,3251
+813,Strategy;RTS;Military,Wargame: AirLand Battle,632,4439
+815,Strategy;Turn-Based Strategy;Fantasy,Heroes of Might & Magic V: Tribes of the East,631,737
+817,Indie;Simulation;Horror,Five Nights at Freddy's,628,1536
+819,Action;Adventure;Indie,Miscreated,622,5159
+820,Action;Indie;Strategy,Gunpoint,619,2647
+822,Indie;Strategy;4X,Galactic Civilizations II: Ultimate Edition,616,3946
+823,Racing;Multiplayer;Automobile Sim,TrackMania Nations Forever,615,1466
+824,RPG;JRPG;Fantasy,Final Fantasy IV (3D Remake),614,667
+826,Simulation;Strategy;Military,Stronghold Crusader HD,611,2942
+827,Simulation;Strategy;Colony Sim,Knights and Merchants,610,7481
+828,Action;Indie;Fighting,Blade Symphony,609,3155
+830,Adventure;Indie;Family Friendly,The Deer,609,4788
+832,Strategy;RTS;Classic,Total Annihilation,608,608
+833,Shooter;Action;Sci-fi,Crysis,605,2237
+835,Action;Adventure;RPG,S.T.A.L.K.E.R.: Call of Pripyat,605,1708
+836,Shooter;Action;Gore,The Darkness II,604,12593
+837,Adventure;Point & Click;Comedy,Deponia,604,1257
+838,Action;Indie;Shoot 'Em Up,The Blue Flamingo,599,1203
+839,Racing;Multiplayer;Singleplayer,Trials Fusion,598,2500
+840,Shooter;Action;Post-apocalyptic,Metro 2033,597,14743
+841,Adventure;Indie;RPG,Memories of a Vagabond,597,4991
+842,Indie;Choices Matter;Point & Click,Minimum,594,1960
+843,Casual;Indie;Simulation,Universe Sandbox,592,750
+844,Action;Adventure;Indie,Woodle Tree Adventures,592,5592
+845,Action;Adventure;Casual,Bloody Trapland,590,1221
+846,Indie;RPG;Strategy,Dead State,585,1408
+848,Action;Adventure;Indie,The Expendabros,576,3088
+849,Software;3D;Difficult,Blender,575,15236
+850,Casual;Strategy;Puzzle,Bejeweled 3,574,1415
+853,Action;Adventure;Indie,Sun Blast,570,1600
+854,RPG;Open World;Hack and Slash,Sacred 2 Gold,569,1150
+857,Action;Casual;Indie,Defend Your Life,565,3130
+858,Action;Casual;Indie,Yet Another Zombie Defense,564,67959
+859,Indie;Platformer;Puzzle,FEZ,562,2571
+860,Shooter;Action;Sci-fi,Crysis 2 Maximum Edition,560,3885
+862,Action;Adventure;Indie,Nether,559,10930
+863,Indie;Simulation;Horror,Five Nights at Freddy's 2,559,1725
+864,Shooter;Action;Multiplayer,Homefront,554,7206
+866,Strategy;Multiplayer;Funny,Worms Ultimate Mayhem,552,786
+867,Action;Casual;Indie,Dead Bits,546,14137
+868,Action;Adventure;Casual,Tap Heroes,545,1511
+869,Adventure;RPG;Strategy,Agarest: Generations of War,544,3813
+870,Action;Software;2D,Borderless Gaming,544,1182
+871,Indie;Simulation;Strategy,Wargame: European Escalation,542,3588
+872,Action;Indie;RPG,Mount & Blade,541,1918
+873,Shooter;Action;Indie,Serious Sam 2,539,894
+875,Action;Indie;Strategy,AirMech,536,2336
+876,Action;Adventure;RPG,F.E.A.R.,535,865
+877,Simulation;Strategy;World War II,Order of Battle: World War II,535,2171
+878,Strategy;World War II;Turn-Based Strategy,Panzer Corps,534,1056
+879,Casual;Racing;Puzzle,Racer 8,532,1357
+880,Massively Multiplayer;RPG;MMORPG,FINAL FANTASY XIV Online Free Trial,532,4290
+881,Action;Adventure;Indie,Brothers - A Tale of Two Sons,530,2019
+882,Massively Multiplayer;RPG;Survival,Fallen Earth Classic,528,2186
+883,Action;Fighting;2D Fighter,THE KING OF FIGHTERS 2002 UNLIMITED MATCH,525,589
+885,Shooter;Action;Open World,Far Cry 2,523,2420
+886,Shooter;Action;Post-apocalyptic,Metro: Last Light Complete Edition,522,37815
+887,Action;Indie;RPG,E.Y.E: Divine Cybermancy,522,2481
+889,RPG;Action;Fantasy,Dungeon Siege III,521,4189
+890,Adventure;Indie;Puzzle-Platformer,Pid,515,1427
+891,Shooter;Action;Multiplayer,Half-Life 2: Deathmatch,511,2702
+892,Indie;Music;Rhythm,Audiosurf,509,5977
+893,Action;Adventure;Indie,Blackguards,509,2360
+894,Action;Adventure;Indie,Revolution Ace,509,1050
+896,Action;Adventure;Indie,Deadlight,506,1678
+898,Indie;RPG;Strategy,GRID,499,4823
+899,Strategy;Grand Strategy;World War II,Darkest Hour: A Hearts of Iron Game,499,502
+900,Shooter;Action;Indie,Serious Sam HD: The First Encounter,498,1214
+901,Adventure;Anime;Detective,Despair,498,2128
+902,Strategy;World War II;War,Men of War: Assault Squad,497,1490
+904,Action;Adventure;Casual,Gang Beasts,495,3062
+905,Indie;Simulation;Strategy,Gnomoria,493,2050
+906,Action;Adventure;Horror,Dead Space 2,492,2484
+907,Action;Indie;Dinosaurs,Primal Carnage,492,2631
+908,Indie;Platformer;Pixel Graphics,The Deer God,492,1039
+909,Adventure;Indie;RPG,Terra Incognita Chapter One: The Descendant,492,13352
+910,Action;Indie;Simulation,Call to Arms,488,2882
+912,Action;Adventure;Indie,LIMBO,480,27466
+913,Action;Adventure;Casual,Cubic Castles,480,1348
+914,Casual;Indie;Strategy,Infinity Wars - Animated Trading Card Game,479,1635
+915,Action;Casual;Indie,Stellar 2D,479,3944
+916,Action;Indie;Gore,Paint the Town Red,478,1423
+917,Action;Adventure;Horror,Dead Space (2008),477,2305
+918,Action;RPG;Atmospheric,S.T.A.L.K.E.R.: Shadow of Chernobyl,475,3770
+919,Action;Strategy;World War II,Company of Heroes - Legacy Edition,472,3344
+920,Indie;Strategy;Rogue-like,Star Chronicles: Delta Quadrant,472,2936
+921,Action;RPG;Hack and Slash,Titan Quest,468,1853
+922,Action;Massively Multiplayer;RPG,Panzar,466,2789
+923,Adventure;Indie;RPG,Legend of Grimrock,463,6075
+924,Casual;Indie;Strategy,Particula,462,7590
+925,Casual;Indie;Simulation,Battle Nations,461,810
+926,Action;Platformer;Comedy,Psychonauts,458,4531
+927,Strategy;2D;Turn-Based,Worms Reloaded,457,7814
+928,Indie;Strategy;Tower Defense,Space Run,456,1488
+929,Action;Adventure;Zombies,Sniper Elite: Nazi Zombie Army 2,454,3563
+930,Casual;Massively Multiplayer;Simulation,The Four Kings Casino and Slots,454,455
+931,Simulation;Sports;Cycling,Pro Cycling Manager 2014,447,1198
+932,Action;Adventure;Indie,ibb & obb,445,1076
+933,Action;Adventure;RPG,Space Rangers HD: A War Apart,445,778
+935,Action;Fighting;2D Fighter,GUILTY GEAR XX ACCENT CORE PLUS R,444,2383
+937,Action;Open World;Automobile Sim,Grand Theft Auto: Vice City,440,1239
+938,Casual;Simulation;Strategy,Ticket to Ride,440,2164
+939,Action;Indie;Multiplayer,Double Action: Boogaloo,438,1184
+941,Indie;Zombies;Pixel Graphics,Eaten Alive,437,2429
+943,Action;Adventure;Indie,Jet Gunner,433,4013
+945,Action;Adventure;Indie,Cry of Fear,430,3075
+946,Shooter;Action;Sci-fi,Half-Life 2: Episode Two,427,1419
+947,Benchmark;Software;3D,3DMark,427,1667
+948,Action;Hack and Slash;Surreal,Killer is Dead,427,4255
+949,Adventure;Casual;Indie,A Story About My Uncle,427,190590
+950,RPG;Strategy;Turn-Based Strategy,King's Bounty: Warriors of the North,426,2219
+951,Simulation;Strategy;Crime,Omerta - City of Gangsters,426,4009
+953,Massively Multiplayer;RPG;MMORPG,EverQuest II,424,1611
+954,Simulation;Sports;Management,Football Manager 2009,421,24738
+955,Simulation;Strategy;Real Time Tactics,Stronghold HD,421,755
+956,RPG;Strategy;Turn-Based Strategy,King's Bounty: The Legend,414,862
+957,Action;Indie;Arcade,Clergy Splode,413,2942
+959,Simulation;Flight;Military,DCS World Steam Edition,412,3328
+960,Indie;Simulation;Driving,Euro Truck Simulator 2 Demo,412,1339
+961,Action;Adventure;Indie,PULSAR: Lost Colony,412,1205
+962,Action;Adventure;Indie,Secrets of Grindea,411,3419
+963,Casual;Indie;Simulation,Pool Nation FX,403,1271
+965,Shooter;Action;Nudity,Duke Nukem Forever,402,13321
+966,Shooter;Action;World War II,Day of Defeat,400,7758
+967,Strategy;World War II;RTS,Blitzkrieg 3,400,1149
+968,Simulation;Strategy;Transportation,Cities in Motion 2,399,1783
+969,RPG;Strategy;Turn-Based Strategy,Might & Magic: Clash of Heroes,398,4757
+970,Action;Co-op;Multiplayer,Alien Swarm,396,60467
+971,Simulation;Sports;Management,Football Manager 2010,394,24343
+972,Simulation;Strategy;Cute,Outland,394,16166
+973,Action;RPG;Stealth,Alpha Protocol,393,2427
+974,Shooter;Action;Sci-fi,Half-Life 2: Episode One,391,1132
+975,Massively Multiplayer;RPG;MMORPG,Ragnarok Online 2,390,9254
+976,Indie;Racing;Simulation,Automation - The Car Company Tycoon Game,390,1508
+977,Action;Simulation;Strategy,Arma 2: DayZ Mod,388,2305
+978,Action;Indie;Anime,Archeblade,386,3460
+979,Action;Adventure;Open World,Prototype,384,1570
+980,Simulation;Strategy;City Builder,Stronghold 3,384,2844
+981,Shooter;Action;Indie,Serious Sam HD: The Second Encounter,383,6162
+982,Action;Adventure;Indie,Edge of Space,383,1210
+984,Action;Adventure;Casual,SEGA Mega Drive & Genesis Classics,380,4522
+986,Software;3D;Memes,FaceRig,369,3554
+987,Action;Indie;Simulation,Blockland,367,2358
+988,Action;Adventure;Action-Adventure,Damned,367,1038
+989,Action;Adventure;Casual,Time Ramesside (A New Reckoning),366,2919
+990,Racing;Automobile Sim;Simulation,RACE 07,363,1199
+991,Action;Indie;RPG,Kenshi,361,11654
+992,Action;Platformer;Great Soundtrack,Sonic Generations,359,1686
+993,Action;RPG;Co-op,War of the Roses,357,6473
+994,Simulation;City Builder;Strategy,Cities XL Platinum,356,1665
+996,Adventure;Casual;Point & Click,Syberia,353,1292
+997,Casual;Pixel Graphics;Indie,Timberman,352,4296
+1001,Indie;Casual;Adventure,Gun Rocket,348,2940
+1007,Strategy;City Builder;Simulation,Anno 1404,338,1070
+1008,Action;Adventure;RPG,S.T.A.L.K.E.R.: Clear Sky,337,1428
+1010,Action;Adventure;RPG,How to Survive 2,337,2823
+1012,Cyberpunk;RPG;Stealth,Deus Ex: Game of the Year Edition,333,1102
+1013,RPG;Simulation;Strategy,Battle Brothers,333,8060
+1014,Action;Adventure;Indie,Labyronia RPG,333,2350
+1015,Action;Adventure;Stealth,Tom Clancy's Splinter Cell: Conviction,332,3856
+1017,Strategy;Tactical;RTS,The Red Solstice,330,82980
+1019,Shooter;Action;World War II,Call of Duty 2,324,822
+1020,Action;Casual;Indie,Defy Gravity,320,4412
+1025,Action;Adventure;Indie,Into the Dark,315,2007
+1026,Shooter;Action;Classic,Far Cry,313,1267
+1027,Racing;Simulation;Sports,rFactor 2,313,1769
+1028,Adventure;Casual;Indie,Retention,312,1642
+1035,Action;Adventure;Casual,Robotex,304,3356
+1036,Nudity;Action;Adventure,Castlevania: Lords of Shadow - Ultimate Edition,299,1585
+1037,Action;RPG;Fantasy,Organ Trail: Director's Cut,297,4629
+1041,Traditional Roguelike;Roguelike;Turn-Based,Dungeons of Dredmor,288,5098
+1042,Casual;Simulation;Puzzle,Temper Tantrum,286,1754
+1044,Action;Adventure;Indie,Secret Of Magia,284,3218
+1045,Action;Destruction;Sci-fi,Red Faction: Armageddon,283,1839
+1047,Strategy;Base-Building;Space,Earth 2160,280,9960
+1049,Action;Indie;Zombies,Dead Effect,278,1032
+1051,Simulation;Strategy;Grand Strategy,Europa Universalis III,276,1315
+1052,Space;Simulation;Multiplayer,Moonbase Alpha,273,1443
+1055,Action;Adventure;Pirates,Assassin's Creed Liberation,272,1174
+1057,RPG;Action;Sci-fi,Mars: War Logs,270,1462
+1058,Exploration;Roguelike;Pixel Graphics,Curious Expedition,270,1038
+1059,Adventure;Indie;Horror,Layers of Fear (2016),270,145384
+1064,Casual;Indie;Side Scroller,Tinboy,262,1713
+1068,Metroidvania;Action;Platformer,Valdis Story: Abyssal City,261,1959
+1070,Shooter;Action;Multiplayer,America's Army 3,259,5735
+1073,Action;Adventure;Indie,The Isle,256,14131
+1074,Stylized;City Builder;Economy,Synergy,253,2940
+1076,Casual;Adventure;Indie,Hero of the Kingdom,251,1003
+1081,Shooter;Action;Sniper,Sniper: Ghost Warrior,246,1586
+1082,Strategy;Turn-Based Strategy;Turn-Based,Sid Meier's Civilization IV: Colonization,244,729
+1085,RPG;Story Rich;Sci-fi,Lords of the Realm II,241,244
+1087,Racing;Open World;Driving,Street Racing Syndicate,240,2270
+1089,RPG;Action RPG;Hack and Slash,Torchlight,239,6217
+1090,Casual;Indie;Simulation,Mad Games Tycoon,239,1434
+1091,Wargame;Immersive Sim;Military,NOBUNAGA'S AMBITION: Tenshouki with Power Up Kit HD Version,237,241
+1092,Animation &amp; Modeling;Web Publishing;Software,Clickteam Fusion 2.5,236,495
+1096,Action;Adventure;Indie,Roguelands,233,1150
+1097,Action;Indie;RPG,Raven's Cry,232,5000
+1100,RPG;Fantasy;Action RPG,Dungeon Siege 2,230,244
+1104,Action;Indie;RPG,Dungeon Defenders Eternity,227,4708
+1110,Adventure;Casual;Indie,The Tiny Bang Story,218,164840
+1112,Action;Adventure;Indie,Jotun: Valhalla Edition,218,27501
+1114,Action;Massively Multiplayer;Strategy,March of War,217,2623
+1115,Action;Racing;Level Editor,Trials Evolution Gold Edition,215,4318
+1116,Action;Adventure;Casual,Sometimes: Success Requires Sacrifice,215,4991
+1117,Action;Adventure;Indie,Hektor,214,1880
+1118,RPG;Open World;Singleplayer,ArcaniA,213,1474
+1119,Sports;Strategy;Multiplayer,Blood Bowl: Legendary Edition,212,2035
+1120,Action;Simulation;Flight,IL-2 Sturmovik: Battle of Stalingrad,212,1061
+1121,Shooter;Action;Classic,Half-Life: Opposing Force,211,5639
+1123,Adventure;Indie;Psychological Horror,Fran Bow,210,796
+1124,Action;Massively Multiplayer;Simulation,Red Orchestra 2: Heroes of Stalingrad - Single Player,209,7132
+1127,Indie;Platformer;Satire,DLC Quest,207,1032
+1128,Adventure;Indie;RPGMaker,Space Pilgrim Episode I: Alpha Centauri,207,16445
+1129,Action;Adventure;Casual,Train Valley,206,1000
+1130,Simulation;Strategy;City Builder,Stronghold 2,203,882
+1131,Adventure;Indie;RPG,Destiny Warriors,200,3571
+1132,Action;Adventure;RPG,Fable - The Lost Chapters,199,2595
+1133,Action;Indie;Strategy,CastleStorm,198,1280
+1134,Action;Casual;Indie,Murder Miners,197,1769
+1135,Simulation;Strategy;City Builder,Tropico 3: Absolute Power,194,1947
+1136,Action;Adventure;Simulation,Enforcer: Police Crime Action,194,2231
+1139,Casual;Indie;RPG,Sword of the Stars: The Pit,192,1298
+1142,Indie;Platformer;Pixel Graphics,Potatoman Seeks the Troof,190,1852
+1143,Strategy;Multiplayer;RTS,Lambda Wars,189,1015
+1144,Casual;Indie;Strategy,Hexcells Infinite,189,384
+1145,Shooter;Action;Indie,Lovely Planet,188,2999
+1149,Action;Fighting;Arcade,THE KING OF FIGHTERS '98 ULTIMATE MATCH FINAL EDITION,184,640
+1150,RPG;Strategy;Turn-Based Tactics,Jagged Alliance 2 - Wildfire,183,5794
+1151,Massively Multiplayer;Racing;Simulation,iRacing,183,2198
+1152,Action;Casual;Indie,Beat Hazard,181,4123
+1153,Action;Indie;RPG,Space Pirates and Zombies,180,3735
+1157,Shooter;Action;Adventure,Deadfall Adventures,177,2010
+1158,Action;Adventure;Indie,SNOW,177,2779
+1159,RPG;Strategy;Turn-Based Strategy,King's Bounty: Crossworlds,176,404
+1161,Indie;Simulation;Strategy,Software Inc.,176,933
+1162,Action;Strategy;World War II,Company of Heroes: Tales of Valor,175,2945
+1164,Action;Adventure;Indie,Yury,174,3007
+1166,Action;Adventure;RPG,Ragnarok,173,973
+1167,Indie;Simulation;Strategy,Turmoil,172,5055
+1171,Adventure;Indie;Point & Click,Goodbye Deponia,168,1103
+1172,Casual;Indie;Cute,The District,168,1604
+1174,Adventure;Indie;RPG,Atonement: Scourge of Time,167,18727
+1175,Strategy;Casual;Action,Battle vs Chess,166,11353
+1176,Benchmark;Software,3DMark Demo,166,502
+1177,Casual;Indie;Simulation,Mountain,165,1667
+1178,Action;Indie;Difficult,Super Hexagon,164,2650
+1179,Simulation;Turn-Based Tactics;Wargame,Romance of the Three Kingdoms Maker,163,1875
+1182,Indie;RPG;Strategy,Sunrider: Mask of Arcadius,161,1024
+1183,Action;Adventure;Indie,Legend of Mysteria,161,2906
+1184,Simulation;Management;Strategy,Cities in Motion,160,1170
+1185,Shooter;Action;Bullet Time,Max Payne,158,727
+1186,Adventure;Indie;Point & Click,Anna's Quest,158,1021
+1187,Shooter;Action;Sci-fi,Binary Domain,156,1077
+1189,Action;Hero Shooter;Multiplayer,Team Fortress Classic,155,1897
+1190,Indie;Strategy;4X,StarDrive,154,3106
+1191,Indie;Puzzle;Casual,Pressured,153,1710
+1193,Platformer;Great Soundtrack;3D Platformer,Sonic Adventure DX,150,597
+1195,Adventure;Indie;Horror,KHOLAT,150,272019
+1196,Action;Indie;RPG,Legend of Dungeon,149,1688
+1197,Software Training;Software;GameMaker,GameGuru Classic,148,1093
+1200,Adventure;RPG;RPGMaker,The Deed,148,3976
+1201,Strategy;Base-Building;Villain Protagonist,Evil Genius,146,1041
+1202,Action;Indie;Racing,Zombie Driver HD,146,1003
+1203,Adventure;Indie;RPG,Caves of Qud,146,2912
+1204,Racing;Multiplayer;Automobile Sim,TrackMania United Forever,145,1345
+1205,Massively Multiplayer;RPG;MMORPG,Karos,145,3534
+1207,Action;Casual;Indie,Millie,144,1688
+1208,Action;Massively Multiplayer;Simulation,World of Goo,143,2045
+1210,Indie;Strategy;RTS,AI War: Fleet Command,142,5027
+1214,Casual;Indie;Fantasy,Guardians of Victoria,140,10374
+1215,Strategy;Turn-Based Strategy;Turn-Based,Sid Meier's Civilization IV: Warlords,139,402
+1217,Indie;Simulation;Strategy,Castle Story,138,1565
+1218,RPG;Turn-Based;JRPG,Septerra Core,138,6616
+1219,Action;Adventure;RPG,Dragon's Dogma: Dark Arisen,138,27368
+1220,Action;Adventure;Indie,Labyronia RPG 2,137,2325
+1221,Action;Adventure;Stealth,Tom Clancy's Splinter Cell,136,421
+1225,Action;Open World;Crime,Mafia II - Demo,131,15864
+1226,Adventure;Indie;Point & Click,Hamlet or the last game without MMORPG features shaders and product placement,131,10714
+1229,Strategy;RTS;World War II,Company of Heroes: Opposing Fronts,129,1426
+1235,Action;Adventure;RPG,Dragon's Prophet,126,1418
+1237,Action;Indie;Arcade,Ascendant,125,2000
+1238,Strategy;Wargame;Turn-Based Strategy,1953: NATO vs Warsaw Pact,125,1504
+1239,Action;Strategy;Stealth,Commandos: Behind Enemy Lines,124,289
+1240,Action;Adventure;Indie,Dinosaur Hunt,124,2412
+1241,Indie;Physics;Platformer,Tiny and Big: Grandpa's Leftovers,122,2311
+1242,Adventure;Casual;Indie,Stranded In Time,122,2544
+1243,Casual;Indie;Pixel Graphics,Turbo Pug,122,15462
+1244,Action;Casual;Indie,Frederic: Resurrection of Music,121,1209
+1245,Adventure;Massively Multiplayer;RPG,Guild Wars,120,1297
+1246,Action;Adventure;Indie,Fork Parker's Holiday Profit Hike,120,2491
+1247,Casual;Indie;Strategy,Quiplash,120,2855
+1248,Shooter;Action;Sci-fi,Half-Life: Blue Shift,119,3145
+1249,Shooter;Action;Multiplayer,BRINK,119,16824
+1250,RPG;Web Publishing;RPGMaker,RPG Maker XP,119,1481
+1251,Action;Indie;Strategy,Tower Wars,117,1956
+1253,Action;Adventure;Female Protagonist,Rise of the Triad,116,2035
+1254,Action;Casual;Indie,Back to Bed,116,30771
+1255,Simulation;Strategy;World War II,Hearts of Iron II: Complete,115,161
+1257,Adventure;Casual;Indie,Nihilumbra,115,2740
+1258,Action;Adventure;Indie,Face It - A game to fight inner demons,115,2594
+1259,Indie;RPG;Strategy,Defender's Quest: Valley of the Forgotten,114,3014
+1260,Indie;Platformer;Narration,Thomas Was Alone,114,1072
+1261,Indie;Racing;Simulation,Liftoff,114,832
+1262,Casual;Puzzle;Arcade,Peggle Deluxe,113,473
+1263,Simulation;Strategy;City Builder,Stronghold Legends,113,313
+1264,Casual,Rocksmith,113,1406
+1265,Casual;Strategy;Puzzle-Platformer,Quantum Conundrum,112,2941
+1266,Action;Adventure;Casual,Depth Hunter 2: Deep Dive,112,5847
+1267,Action;Adventure;Indie,Schein,111,1990
+1268,Indie;Strategy;Turn-Based,Frozen Synapse,110,2155
+1270,Adventure;RPG;Strategy,King of Dragon Pass,110,1599
+1271,RPG;Web Publishing;RPGMaker,RPG Maker 2003,110,173
+1274,Action;Simulation;Strategy,Arma: Cold War Assault,108,3017
+1275,Indie;Movie;Documentary,Indie Game: The Movie,108,1114
+1276,Action;Indie;Strategy,Cortex Command,108,62839
+1277,Action;Casual;Singleplayer,Zuma's Revenge,107,399
+1278,Action;Indie;Action Roguelike,Teleglitch: Die More Edition,107,1431
+1279,Action;Adventure;Casual,Sparkle 2 Evo,107,1408
+1280,Strategy;Turn-Based Strategy;Turn-Based,Sid Meier's Colonization (Classic),107,323
+1281,Casual;Match 3;Puzzle,Zuma Deluxe,105,1018
+1282,Simulation;Naval Combat;Submarine,Silent Hunter III,105,237
+1284,Action;RPG;Co-op,War of the Vikings,105,2028
+1285,Action;RPG;Co-op,The Flame in the Flood,104,6158
+1286,Adventure;Indie;RPG,Data Hacker: Reboot,104,8838
+1287,Indie;RPG;Strategy,Dungeonland,103,4812
+1288,Action;Adventure;Indie,SteamWorld Dig,102,2805
+1289,Simulation;Sports;Management,Football Tactics & Glory,102,1020
+1290,Indie;Medieval;Action,Age of Chivalry,101,2399
+1291,RPG;Simulation;Strategy,KeeperRL,101,964
+1292,Action;Adventure;Indie,CRYPTARK,101,2975
+1293,Action;Adventure;Indie,Escape Machines,101,8841
+1294,Shooter;Action;Indie,12 is Better Than 6,101,4517
+1295,Adventure;Casual;Indie,Dreaming Sarah,100,3038

@@ -1,40 +1,33 @@
-# Viralgo Frontend (React + Vite)
 
-This repo now hosts only the client interface for the Viralgo dashboards. The PHP API layer lives on a separate server, so this project focuses on rendering CSV-driven insights and calling those PHP endpoints when needed.
+# Viralgo Data Visualization
 
-## Stack Overview
-- [Vite](https://vitejs.dev/) + React 19 + TypeScript.
-- Tailwind or other styling libs can be layered on top of `src` as you bring back the design assets.
-- External PHP backend handles data ingestion, CSV parsing, and Twitch/Steam API mirroring.
+Viralgo tracks how game popularity shifts across platforms and social channels. All raw CSV datasets (Steam peaks, Twitch/YouTube stats, genre mappings, etc.) live on our cPanel backend and are exposed through lightweight PHP endpoints. The React/Vite front end—deployed via Vercel—pulls those datasets, renders the dashboards, and links to the repos/script references. This repo contains the latest multi-page UI (Home, Insights, Sources, Games) and uses the same asset bundle as the original Figma design.
 
-## Getting Started
+## Workflow Overview
+
+1. **Data ingestion**: Backend scripts scrape APIs (Steam, Twitch, YouTube, SensorTower) and store CSVs on cPanel.
+2. **API layer**: PHP pages on cPanel serve CSV data (or aggregated JSON) to the front end via HTTPS.
+3. **Front end (this repo)**: React + Vite app fetches that data, renders dashboards, and drives navigation.
+4. **Deployment**: Vercel builds the Vite app (`npm run build`, output to `dist/`) and hosts it on `viralgo.space`.
+
+## Development
+
 ```bash
-npm install        # already run once, repeat after pulling updates
-npm run dev        # start Vite dev server on http://localhost:5173
-npm run build      # optional production build output into dist/
+npm install          # restore dependencies
+npm run dev          # start Vite dev server
+npm run build        # optional: production build
 ```
 
-Vite expects Node.js 20.19+ (or current LTS). Install Node globally so you no longer need the portable runtime that was used during setup.
+For local builds on Windows without global PATH entries, run:
 
-## Folder Structure
 ```
-.
-index.html          # Vite entry template
-package.json        # npm scripts and deps
-src/                # drop the React/Vite layout you exported earlier
-assets/         # optional local images/fonts
-main.tsx        # Vite entry point (currently boilerplate)
-public/             # static assets served as-is (favicons, etc.)
+"C:\Program Files\nodejs\npm.cmd" install
+"C:\Program Files\nodejs\npm.cmd" run dev
 ```
 
-Feel free to overwrite the `src` directory with your existing Viralgo UI once you're ready.
+## Deployment Notes
 
-## Connecting To PHP Backend
-- Configure environment variables (e.g., `VITE_API_BASE_URL`) using a `.env` file for dev endpoints.
-- Call PHP routes via `fetch`/`axios` from React components; the PHP server can serve CSV-derived JSON or proxy live Twitch/Steam metrics.
-- Because the backend sits elsewhere, deploy this Vite bundle as static files (Netlify, Vercel, S3, etc.) and point it at the PHP domain.
-
-## Next Steps
-1. Copy your previous `src` bundle into this repo to restore the UI.
-2. Define `.env.development` / `.env.production` variables for the PHP API base URL.
-3. Hook up CSV charts and API calls to the PHP services.
+- `vercel.json` expects the build output in `dist/` (Vite’s `outDir` matches).
+- Promote the latest successful Vercel deployment to Production to update `viralgo.space`.
+- Backend CSVs/scripts live outside this repo; keep those credentials/configs on cPanel.
+  
